@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://c7giupltwvgrb"]
+
+[ext_resource type="Texture2D" uid="uid://xytkjbp0dx3s" path="res://Sevak_Assets/Стол.png" id="1_jd0nb"]
+
+[node name="Table" type="StaticBody2D" unique_id=1018577840]
+
+[node name="Стол" type="Sprite2D" parent="." unique_id=1494746390]
+position = Vector2(37, -86)
+texture = ExtResource("1_jd0nb")

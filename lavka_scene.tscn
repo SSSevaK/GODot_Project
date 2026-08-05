@@ -20,5 +20,5 @@ position = Vector2(546, 347)
 [node name="White" parent="." unique_id=1998657987 instance=ExtResource("4_f5gvi")]
 position = Vector2(762, 489)
 
-[node name="StaticBody2D" parent="." unique_id=1385115240 instance=ExtResource("5_bimyk")]
-position = Vector2(409, 446)
+[node name="flask" parent="." unique_id=1385115240 instance=ExtResource("5_bimyk")]
+position = Vector2(378, 591)

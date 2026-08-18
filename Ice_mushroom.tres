@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="IngredientData" format=3 uid="uid://bsks3cytfgk2s"]
+
+[ext_resource type="Texture2D" uid="uid://seib651176jc" path="res://1d0617c24cd4c2205f87926ae3caaa02-removebg-preview.png" id="1_8u2f4"]
+[ext_resource type="Script" uid="uid://dldi4kvkpuhub" path="res://IngredientData.cs" id="1_iw7oo"]
+
+[resource]
+script = ExtResource("1_iw7oo")
+Name = "Ледяной гриб"
+Icon = ExtResource("1_8u2f4")
+FireIceValue = -0.8

@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dbd0p5kyw0724"]
+
+[ext_resource type="Texture2D" uid="uid://c00gd1t0def03" path="res://Sevak_Assets/Уолтер вайт.png" id="1_ucyky"]
+
+[node name="White" type="StaticBody2D" unique_id=1998657987]
+
+[node name="УолтерВайт" type="Sprite2D" parent="." unique_id=1596548699]
+texture = ExtResource("1_ucyky")

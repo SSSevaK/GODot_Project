@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://c5x4v6478jll2"]
+
+[ext_resource type="Texture2D" uid="uid://d1tcgxl2ql1vc" path="res://Sevak_Assets/Колба.png" id="1_4pyfl"]
+[ext_resource type="Script" uid="uid://dkcu4wabkqri6" path="res://Колба.cs" id="2_p3s7j"]
+
+[node name="flask" type="StaticBody2D" unique_id=1385115240]
+
+[node name="Колба" type="Sprite2D" parent="." unique_id=1330816294]
+texture = ExtResource("1_4pyfl")
+script = ExtResource("2_p3s7j")

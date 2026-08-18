@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dpcgthexowpjs" path="res://ingredient.tscn" id="1_fup07"]
 [ext_resource type="PackedScene" uid="uid://bmw5380xlb42c" path="res://closet.tscn" id="3_0n04c"]
 [ext_resource type="PackedScene" uid="uid://dgod24uc0kb8t" path="res://slot.tscn" id="4_qqmqv"]
-[ext_resource type="PackedScene" uid="uid://c7giupltwvgrb" path="res://table.tscn" id="5_68esv"]
+[ext_resource type="PackedScene" uid="uid://c7giupltwvgrb" path="res://table_lab.tscn" id="5_68esv"]
 [ext_resource type="PackedScene" uid="uid://b210qkhwk2gif" path="res://burner.tscn" id="6_qqmqv"]
 
 [node name="Lab_Scene" type="Node2D" unique_id=134316402]

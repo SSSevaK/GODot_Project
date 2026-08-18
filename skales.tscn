@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dhqx14hsb3g5l"]
+
+[ext_resource type="Texture2D" uid="uid://bi75sscdxa605" path="res://Sevak_Assets/весы3.0.png" id="1_db6pw"]
+
+[node name="Skales" type="StaticBody2D" unique_id=991409498]
+
+[node name="Весы3_0" type="Sprite2D" parent="." unique_id=965443620]
+texture = ExtResource("1_db6pw")

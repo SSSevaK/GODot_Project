@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dfwueco27gk0b" path="res://Gemini_Generated_Image_h90etsh90etsh90e-removebg-preview.png" id="1_jd0nb"]
 
-[node name="Table" type="Node2D" unique_id=151802696]
+[node name="Table_lab" type="Node2D" unique_id=151802696]
 position = Vector2(332, 131)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1150622973]

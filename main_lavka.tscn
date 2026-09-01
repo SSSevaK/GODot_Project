@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cvpdb2f72ed12"]
+
+[ext_resource type="PackedScene" uid="uid://c5x4v6478jll2" path="res://flask.tscn" id="1_kqvm2"]
+[ext_resource type="PackedScene" uid="uid://dhqx14hsb3g5l" path="res://skales.tscn" id="2_67153"]
+[ext_resource type="PackedScene" uid="uid://c7giupltwvgrb" path="res://table.tscn" id="3_d0li4"]
+[ext_resource type="PackedScene" uid="uid://dbd0p5kyw0724" path="res://white.tscn" id="4_xldjh"]
+
+[node name="Node2D" type="Node2D" unique_id=133561643]
+
+[node name="Table" parent="." unique_id=1018577840 instance=ExtResource("3_d0li4")]
+position = Vector2(497, 612)
+
+[node name="flask" parent="." unique_id=251120625 instance=ExtResource("1_kqvm2")]
+position = Vector2(322, 613)
+
+[node name="Skales" parent="." unique_id=991409498 instance=ExtResource("2_67153")]
+position = Vector2(366, 523)
+
+[node name="White" parent="." unique_id=1998657987 instance=ExtResource("4_xldjh")]
+position = Vector2(694, 509)

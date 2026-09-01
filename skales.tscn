@@ -1,22 +1,11 @@
 [gd_scene format=3 uid="uid://dhqx14hsb3g5l"]
 
 [ext_resource type="Texture2D" uid="uid://bi75sscdxa605" path="res://Sevak_Assets/весы3.0.png" id="1_db6pw"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_gteju"]
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tyl5c"]
-height = 20.0
+[ext_resource type="Script" uid="uid://0bodd405rsvw" path="res://Skales.cs" id="1_qn5g4"]
 
 [node name="Skales" type="StaticBody2D" unique_id=991409498]
+script = ExtResource("1_qn5g4")
 
 [node name="Весы3_0" type="Sprite2D" parent="." unique_id=965443620]
 position = Vector2(1, 0)
 texture = ExtResource("1_db6pw")
-
-[node name="poizon" type="CollisionShape2D" parent="." unique_id=173719774]
-position = Vector2(31, 9)
-shape = SubResource("CircleShape2D_gteju")
-
-[node name="Gold" type="CollisionShape2D" parent="." unique_id=1800303135]
-position = Vector2(-30, 10)
-shape = SubResource("CapsuleShape2D_tyl5c")

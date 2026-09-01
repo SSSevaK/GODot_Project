@@ -4,17 +4,29 @@
 [ext_resource type="PackedScene" uid="uid://dhqx14hsb3g5l" path="res://skales.tscn" id="2_67153"]
 [ext_resource type="PackedScene" uid="uid://c7giupltwvgrb" path="res://table.tscn" id="3_d0li4"]
 [ext_resource type="PackedScene" uid="uid://dbd0p5kyw0724" path="res://white.tscn" id="4_xldjh"]
+[ext_resource type="Script" uid="uid://dffir3mmhj1j7" path="res://TextEdit.cs" id="5_67153"]
 
 [node name="Node2D" type="Node2D" unique_id=133561643]
 
 [node name="Table" parent="." unique_id=1018577840 instance=ExtResource("3_d0li4")]
-position = Vector2(497, 612)
-
-[node name="flask" parent="." unique_id=251120625 instance=ExtResource("1_kqvm2")]
-position = Vector2(322, 613)
+position = Vector2(514, 592)
 
 [node name="Skales" parent="." unique_id=991409498 instance=ExtResource("2_67153")]
-position = Vector2(366, 523)
+position = Vector2(330, 502)
 
 [node name="White" parent="." unique_id=1998657987 instance=ExtResource("4_xldjh")]
-position = Vector2(694, 509)
+position = Vector2(677, 490)
+
+[node name="flask" parent="." unique_id=251120625 instance=ExtResource("1_kqvm2")]
+position = Vector2(327, 569)
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=962366264]
+position = Vector2(361, 510)
+
+[node name="TextEdit" type="TextEdit" parent="." unique_id=2019726678]
+offset_left = 278.0
+offset_top = 385.0
+offset_right = 506.0
+offset_bottom = 461.0
+theme_override_font_sizes/font_size = 12
+script = ExtResource("5_67153")

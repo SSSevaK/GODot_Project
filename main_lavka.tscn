@@ -9,24 +9,24 @@
 [node name="Node2D" type="Node2D" unique_id=133561643]
 
 [node name="Table" parent="." unique_id=1018577840 instance=ExtResource("3_d0li4")]
-position = Vector2(308, 303)
+position = Vector2(491, 601)
 
 [node name="Skales" parent="." unique_id=991409498 instance=ExtResource("2_67153")]
-position = Vector2(158, 212)
+position = Vector2(335, 512)
 
 [node name="White" parent="." unique_id=1998657987 instance=ExtResource("4_xldjh")]
-position = Vector2(468, 198)
+position = Vector2(696, 498)
 
 [node name="flask" parent="." unique_id=251120625 instance=ExtResource("1_kqvm2")]
-position = Vector2(135, 303)
+position = Vector2(314, 603)
 
 [node name="Marker2D" type="Marker2D" parent="." unique_id=962366264]
-position = Vector2(190, 222)
+position = Vector2(367, 519)
 
 [node name="TextEdit" type="TextEdit" parent="." unique_id=2019726678]
-offset_left = 188.0
-offset_top = 118.0
-offset_right = 416.0
-offset_bottom = 194.0
+offset_left = 350.0
+offset_top = 393.0
+offset_right = 578.0
+offset_bottom = 469.0
 theme_override_font_sizes/font_size = 12
 script = ExtResource("5_67153")

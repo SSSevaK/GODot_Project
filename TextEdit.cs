@@ -9,10 +9,11 @@ public partial class TextEdit : Godot.TextEdit
 	{
         GetNode<Колба>("../flask/Колба").ItemInZone += CheckItem;
         Text = Gold.ToString();
+
     }
 
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
-	public override void _Process(double delta)
+    // Called every frame. 'delta' is the elapsed time since the previous frame.
+    public override void _Process(double delta)
 	{
 	}
     private void CheckItem(int id)

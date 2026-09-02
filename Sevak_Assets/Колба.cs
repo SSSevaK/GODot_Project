@@ -11,7 +11,6 @@ public partial class Колба : Sprite2D
 
     public override void _Ready()
     {
-        
     }
 
 
@@ -21,7 +20,7 @@ public partial class Колба : Sprite2D
         {
             GlobalPosition = GetGlobalMousePosition();
         }
-        Rect2 zone = new Rect2(361, 510, 25, 25);
+        Rect2 zone = new Rect2(367, 519, 25, 25);
         if (zone.HasPoint(GlobalPosition) && !check)
         {
             GD.Print("Poizon in area");

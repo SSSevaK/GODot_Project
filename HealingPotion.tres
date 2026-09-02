@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="PotionRecipe" format=3 uid="uid://ym0pvtpf8opd"]
+
+[ext_resource type="Texture2D" uid="uid://bgnfy0g7r2g6a" path="res://healing_potion.png" id="1_hxo6c"]
+[ext_resource type="Script" uid="uid://h0x2oryr8qyt" path="res://PotionRecipe.cs" id="1_j06co"]
+
+[resource]
+script = ExtResource("1_j06co")
+PotionName = "Зелье Исцеления"
+Icon = ExtResource("1_hxo6c")
+TargetFireIceValue = -0.7999999999999998

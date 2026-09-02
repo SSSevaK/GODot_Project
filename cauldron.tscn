@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://px8b4kqvrfjm"]
+
+[ext_resource type="Script" uid="uid://ntv0fj0hxqkf" path="res://Cauldron.cs" id="1_0t22i"]
+[ext_resource type="Texture2D" uid="uid://uvnqvrs4j7ea" path="res://cauldron_shadow.png" id="1_5qdwy"]
+[ext_resource type="Resource" uid="uid://ym0pvtpf8opd" path="res://HealingPotion.tres" id="2_ju8ne"]
+[ext_resource type="PackedScene" uid="uid://cene7phwu5he0" path="res://potion.tscn" id="3_4kmeg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4kxuq"]
+size = Vector2(115, 118)
+
+[sub_resource type="LabelSettings" id="LabelSettings_4kxuq"]
+font_size = 41
+
+[node name="Cauldron" type="Area2D" unique_id=570166040 node_paths=PackedStringArray("WarningLabel", "BrewButton", "Inventory")]
+position = Vector2(0, 1)
+script = ExtResource("1_0t22i")
+WarningLabel = NodePath("UI_Layer/WarningLabel")
+BrewButton = NodePath("UI_Layer/BrewButton")
+TargetRecipe = ExtResource("2_ju8ne")
+PotionScene = ExtResource("3_4kmeg")
+Inventory = NodePath("")
+metadata/_edit_vertical_guides_ = [-104.0]
+
+[node name="Cauldron_sprite" type="Sprite2D" parent="." unique_id=292398937]
+position = Vector2(350, 224)
+texture = ExtResource("1_5qdwy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1299134735]
+position = Vector2(353, 218)
+shape = SubResource("RectangleShape2D_4kxuq")
+
+[node name="UI_Layer" type="Control" parent="." unique_id=1076064184]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 389.0
+offset_top = 271.0
+offset_right = 434.0
+offset_bottom = 294.0
+
+[node name="BrewButton" type="Button" parent="UI_Layer" unique_id=863344235]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.2800001
+anchor_bottom = 1.273
+offset_left = -11.0
+offset_right = 11.399998
+offset_bottom = 1.7210007
+text = "Brew
+"
+
+[node name="WarningLabel" type="Label" parent="UI_Layer" unique_id=1043648719]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -5.111
+anchor_top = -2.174
+anchor_right = -5.111
+anchor_bottom = -2.174
+offset_left = -149.005
+offset_top = -39.998
+offset_right = 148.995
+offset_bottom = 40.002
+grow_horizontal = 2
+grow_vertical = 2
+text = "Котёл пуст!"
+label_settings = SubResource("LabelSettings_4kxuq")

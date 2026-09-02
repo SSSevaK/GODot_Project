@@ -1,22 +1,21 @@
 [gd_scene format=3 uid="uid://dpcgthexowpjs"]
 
 [ext_resource type="Script" uid="uid://brh1v5p3ggv31" path="res://Ingredient.cs" id="1_762re"]
-[ext_resource type="Texture2D" uid="uid://seib651176jc" path="res://1d0617c24cd4c2205f87926ae3caaa02-removebg-preview.png" id="2_u8g6t"]
 [ext_resource type="Resource" uid="uid://bsks3cytfgk2s" path="res://Ice_mushroom.tres" id="2_veaxr"]
+[ext_resource type="Texture2D" uid="uid://uvnqvrs4j7ea" path="res://cauldron_shadow.png" id="3_u8g6t"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4kxuq"]
-size = Vector2(59, 62)
+size = Vector2(35.5, 39)
 
 [node name="Ingredient" type="Area2D" unique_id=1644309441]
-position = Vector2(437, 229)
+position = Vector2(441, 230)
 script = ExtResource("1_762re")
 ItemData = ExtResource("2_veaxr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=554306399]
-position = Vector2(-6, 5)
 shape = SubResource("RectangleShape2D_4kxuq")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1401640093]
-position = Vector2(-6.400667, 5)
-scale = Vector2(0.15086079, 0.13043478)
-texture = ExtResource("2_u8g6t")
+position = Vector2(2.3841858e-05, -0.49999762)
+scale = Vector2(0.26562503, 0.27343747)
+texture = ExtResource("3_u8g6t")

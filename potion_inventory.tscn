@@ -1,0 +1,82 @@
+[gd_scene format=3 uid="uid://c2p8pat6fsjy5"]
+
+[ext_resource type="Script" uid="uid://bba350qk2uarf" path="res://PotionInventory.cs" id="1_kjt8o"]
+[ext_resource type="PackedScene" uid="uid://bh1arg2m6o4du" path="res://potion_slot.tscn" id="2_sqeu4"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sqeu4"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.33291268, 0.3396731, 0.32485968, 0.6)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.218402, 0.18430555, 0.14927366, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 6
+
+[node name="PoitionInventory" type="Control" unique_id=1013624139 node_paths=PackedStringArray("OpenButton", "InventoryPanel", "SlotsGrid")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kjt8o")
+OpenButton = NodePath("OpenButton")
+InventoryPanel = NodePath("InventoryPanel")
+SlotsGrid = NodePath("InventoryPanel/GridContainer")
+
+[node name="OpenButton" type="Button" parent="." unique_id=413438471]
+layout_mode = 0
+offset_top = -1.0
+offset_right = 58.0
+offset_bottom = 22.0
+theme_override_font_sizes/font_size = 10
+text = "Inventory"
+
+[node name="InventoryPanel" type="Panel" parent="." unique_id=1686134357]
+layout_mode = 0
+offset_top = 22.0
+offset_right = 109.0
+offset_bottom = 133.0
+
+[node name="GridContainer" type="GridContainer" parent="InventoryPanel" unique_id=749801907]
+layout_mode = 0
+offset_left = 1.0
+offset_right = 72.0
+offset_bottom = 62.0
+columns = 3
+
+[node name="PotionSlot9" parent="InventoryPanel/GridContainer" unique_id=154060140 instance=ExtResource("2_sqeu4")]
+layout_mode = 2
+
+[node name="PotionSlot8" parent="InventoryPanel/GridContainer" unique_id=1418805590 instance=ExtResource("2_sqeu4")]
+layout_mode = 2
+
+[node name="PotionSlot7" parent="InventoryPanel/GridContainer" unique_id=2041326344 instance=ExtResource("2_sqeu4")]
+layout_mode = 2
+
+[node name="PotionSlot6" parent="InventoryPanel/GridContainer" unique_id=372067474 instance=ExtResource("2_sqeu4")]
+layout_mode = 2
+
+[node name="PotionSlot5" parent="InventoryPanel/GridContainer" unique_id=1442644664 instance=ExtResource("2_sqeu4")]
+layout_mode = 2
+
+[node name="PotionSlot4" parent="InventoryPanel/GridContainer" unique_id=1709054694 instance=ExtResource("2_sqeu4")]
+layout_mode = 2
+
+[node name="PotionSlot3" parent="InventoryPanel/GridContainer" unique_id=466960387 instance=ExtResource("2_sqeu4")]
+layout_mode = 2
+
+[node name="PotionSlot2" parent="InventoryPanel/GridContainer" unique_id=1826331376 instance=ExtResource("2_sqeu4")]
+layout_mode = 2
+
+[node name="PotionSlot" parent="InventoryPanel/GridContainer" unique_id=480415170 instance=ExtResource("2_sqeu4")]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_sqeu4")

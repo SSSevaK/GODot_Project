@@ -26,18 +26,18 @@
 				{
 					if (GetGlobalMousePosition().DistanceTo(GlobalPosition) < 50)
 					{
-                         input = true;
-                    }
+						 input = true;
+					}
 					else
 					{
 						 input = false;
 					}
 				}
 			}
-            else
-            {
-                input = false;
-            }
-        }
+			else
+			{
+				input = false;
+			}
+		}
 	}
 }

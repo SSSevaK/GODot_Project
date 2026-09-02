@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://bh1arg2m6o4du"]
+
+[ext_resource type="Script" uid="uid://3qth1yihd273" path="res://PotionSlot.cs" id="1_myl20"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_myl20"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.39982116, 0.38909775, 0.3601371, 0.6)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.218402, 0.18430555, 0.14927366, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 6
+
+[node name="PotionSlot" type="Panel" unique_id=154060140]
+custom_minimum_size = Vector2(24, 24)
+offset_left = 23.0
+offset_top = 34.0
+offset_right = 68.0
+offset_bottom = 71.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_myl20")
+script = ExtResource("1_myl20")
+theme_override_styles/panel = SubResource("StyleBoxFlat_myl20")

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b210qkhwk2gif"]
 
 [ext_resource type="Script" uid="uid://bbq0yuu5fc7vm" path="res://Burner.cs" id="1_oi1jn"]
-[ext_resource type="Texture2D" uid="uid://dyy0ngbj3umve" path="res://5d3ba10ad447d460391b8a032506e9fd.jpg" id="2_jeivi"]
+[ext_resource type="Texture2D" uid="uid://bgnfy0g7r2g6a" path="res://healing_potion.png" id="2_j5yw2"]
 [ext_resource type="Texture2D" uid="uid://c4cn8l3wdkb01" path="res://2.1 flame.jpg" id="3_j5yw2"]
 [ext_resource type="Texture2D" uid="uid://d2ku8d5vr1e5g" path="res://2.2 flame.jpg" id="4_vvbvh"]
 [ext_resource type="Texture2D" uid="uid://2f8l81hd35gr" path="res://2.3 flame.jpg" id="5_rsr5m"]
@@ -58,22 +58,22 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mti6b"]
-size = Vector2(57, 113.5)
+size = Vector2(47.5, 90.75)
 
 [node name="Burner" type="Area2D" unique_id=295726864]
 script = ExtResource("1_oi1jn")
 
 [node name="candle" type="Sprite2D" parent="." unique_id=119489825]
-position = Vector2(251.25, 232)
-scale = Vector2(0.07109373, 0.07187499)
-texture = ExtResource("2_jeivi")
+position = Vector2(248.38908, 252.51875)
+scale = Vector2(1.5381832, 1.4699217)
+texture = ExtResource("2_j5yw2")
 
 [node name="Flame" type="AnimatedSprite2D" parent="." unique_id=253279492]
-position = Vector2(251.99998, 179)
-scale = Vector2(0.42207792, 0.47272727)
+position = Vector2(249.00002, 209.00002)
+scale = Vector2(0.2813909, 0.3158338)
 sprite_frames = SubResource("SpriteFrames_mm1bc")
 animation = &"strong"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1554565313]
-position = Vector2(251.5, 202.75)
+position = Vector2(248.25, 226.375)
 shape = SubResource("RectangleShape2D_mti6b")

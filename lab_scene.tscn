@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://b0gl5ycev2mkq"]
+
+[ext_resource type="Texture2D" uid="uid://yewskvq2xb3q" path="res://background.png" id="1_0n04c"]
+[ext_resource type="PackedScene" uid="uid://dpcgthexowpjs" path="res://ingredient.tscn" id="1_fup07"]
+[ext_resource type="PackedScene" uid="uid://bmw5380xlb42c" path="res://closet.tscn" id="3_0n04c"]
+[ext_resource type="PackedScene" uid="uid://dgod24uc0kb8t" path="res://slot.tscn" id="4_qqmqv"]
+[ext_resource type="PackedScene" uid="uid://c7giupltwvgrb" path="res://table_lab.tscn" id="5_68esv"]
+[ext_resource type="PackedScene" uid="uid://b210qkhwk2gif" path="res://burner.tscn" id="6_qqmqv"]
+
+[node name="Lab_Scene" type="Node2D" unique_id=134316402]
+
+[node name="Background" type="Sprite2D" parent="." unique_id=648275126]
+z_index = -1
+position = Vector2(318.75, 177.25002)
+scale = Vector2(1.0039063, 1.0041666)
+texture = ExtResource("1_0n04c")
+
+[node name="Closet" parent="." unique_id=2137898820 instance=ExtResource("3_0n04c")]
+z_index = 1
+position = Vector2(707, 223)
+
+[node name="Slot" parent="Closet" unique_id=227940734 instance=ExtResource("4_qqmqv")]
+position = Vector2(-131, 57)
+
+[node name="Slot2" parent="Closet" unique_id=780902292 instance=ExtResource("4_qqmqv")]
+position = Vector2(-129, 9)
+
+[node name="Slot3" parent="Closet" unique_id=673409150 instance=ExtResource("4_qqmqv")]
+position = Vector2(-198, 7)
+
+[node name="Slot4" parent="Closet" unique_id=1176557824 instance=ExtResource("4_qqmqv")]
+position = Vector2(-198, 58)
+
+[node name="Slot5" parent="Closet" unique_id=1072114351 instance=ExtResource("4_qqmqv")]
+position = Vector2(-260, -40)
+
+[node name="Slot6" parent="Closet" unique_id=1054706438 instance=ExtResource("4_qqmqv")]
+position = Vector2(-267, 54)
+
+[node name="Slot7" parent="Closet" unique_id=1820218469 instance=ExtResource("4_qqmqv")]
+position = Vector2(-129, -41)
+
+[node name="Slot8" parent="Closet" unique_id=1449416426 instance=ExtResource("4_qqmqv")]
+position = Vector2(-194, -43)
+
+[node name="Slot9" parent="Closet" unique_id=469137173 instance=ExtResource("4_qqmqv")]
+position = Vector2(-261, 0)
+
+[node name="Table" parent="." unique_id=151802696 instance=ExtResource("5_68esv")]
+position = Vector2(196, 127)
+
+[node name="Ingredient" parent="." unique_id=1644309441 instance=ExtResource("1_fup07")]
+z_index = 2
+position = Vector2(261, 194)
+
+[node name="Burner" parent="." unique_id=204334387 instance=ExtResource("6_qqmqv")]
+position = Vector2(-101, -17)

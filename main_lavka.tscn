@@ -18,7 +18,7 @@ position = Vector2(335, 512)
 position = Vector2(696, 498)
 
 [node name="flask" parent="." unique_id=251120625 instance=ExtResource("1_kqvm2")]
-position = Vector2(314, 603)
+position = Vector2(317, 601)
 
 [node name="Marker2D" type="Marker2D" parent="." unique_id=962366264]
 position = Vector2(367, 519)

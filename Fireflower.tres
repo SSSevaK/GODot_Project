@@ -1,4 +1,4 @@
-[gd_resource type="Resource" format=3 uid="uid://cq7nmypje8tpd"]
+[gd_resource type="Resource" script_class="IngredientData" format=3 uid="uid://cq7nmypje8tpd"]
 
 [ext_resource type="Script" uid="uid://dldi4kvkpuhub" path="res://IngredientData.cs" id="2_eq247"]
 

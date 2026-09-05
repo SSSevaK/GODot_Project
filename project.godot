@@ -11,18 +11,18 @@ config_version=5
 [application]
 
 config/name="ZELEVAR"
-run/main_scene="uid://b0gl5ycev2mkq"
+run/main_scene="uid://cwpxwbyrl5vch"
 config/features=PackedStringArray("4.7", "C#", "Forward Plus")
 config/icon="res://icon.svg"
-<<<<<<<HEADrun/main_scene="uid://b0gl5ycev2mkq"
+
+[autoload]
+
+SeedScrBurmalda="*uid://by15yjq2xeuyc"
 
 [display]
 
-window/size/viewport_width=640
-window/size/viewport_height=360
-window/size/mode=3
-window/stretch/mode="viewport"
-window/stretch/scale_mode="integer"
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
 
 [dotnet]
 
@@ -34,7 +34,4 @@ project/assembly_name="ZELEVAR"
 
 [rendering]
 
-textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
-2d/snap/snap_2d_transforms_to_pixel=true
-2d/snap/snap_2d_vertices_to_pixel=true

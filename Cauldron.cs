@@ -62,18 +62,16 @@ public partial class Cauldron : Area2D
 		if (difference <= TargetRecipe.Tolerance)
 		{
 			ShowWarning($"Сварено: {TargetRecipe.PotionName}!");
-
-			// 1. Создаём новый экземпляр сцены Зелья
 			Potion newPotion = PotionScene.Instantiate<Potion>();
-			
-			// 2. Заполняем его данными рецепта
-			newPotion.Setup(TargetRecipe);
+	
+			// Настройка иконки (через метод или напрямую через GetNode)
+			var iconNode = newPotion.GetNodeOrNull<TextureRect>("Icon");
 
-			// 3. Отправляем в сцену инвентаря
-			if (Inventory != null)
-			{
-				Inventory.AddPotionNode(newPotion);
-			}
+			iconNode.Texture = TargetRecipe.Icon;
+   			iconNode.ExpandMode = TextureRect.ExpandModeEnum.IgnoreSize;
+   			iconNode.StretchMode = TextureRect.StretchModeEnum.KeepAspectCentered;
+			Inventory.AddPotionNode(newPotion);
+			GD.Print($"[CAULDRON] Успешно сварено зелье: {TargetRecipe.ResourceName}");
 		}
 		else
 		{

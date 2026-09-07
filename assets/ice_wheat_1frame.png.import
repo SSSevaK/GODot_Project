@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://seib651176jc"
-path="res://.godot/imported/1d0617c24cd4c2205f87926ae3caaa02-removebg-preview.png-c78ec910d18fac9fc6d58f36fb7b3614.ctex"
+uid="uid://c7vciqe83nqcr"
+path="res://.godot/imported/ice_wheat_1frame.png-83de77af92bc86fd97ed264642767d08.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://1d0617c24cd4c2205f87926ae3caaa02-removebg-preview.png"
-dest_files=["res://.godot/imported/1d0617c24cd4c2205f87926ae3caaa02-removebg-preview.png-c78ec910d18fac9fc6d58f36fb7b3614.ctex"]
+source_file="res://assets/ice_wheat_1frame.png"
+dest_files=["res://.godot/imported/ice_wheat_1frame.png-83de77af92bc86fd97ed264642767d08.ctex"]
 
 [params]
 

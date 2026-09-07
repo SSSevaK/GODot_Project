@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="IngredientData" format=3 uid="uid://bsks3cytfgk2s"]
+
+[ext_resource type="Texture2D" uid="uid://c7vciqe83nqcr" path="res://assets/ice_wheat_1frame.png" id="1_n2dyr"]
+[ext_resource type="Texture2D" uid="uid://d2gwj2v5d8es" path="res://assets/ice_wheat_2frame.png" id="2_hsswy"]
+[ext_resource type="Script" uid="uid://dldi4kvkpuhub" path="res://IngredientData.cs" id="2_n2dyr"]
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_0ofvn"]
+frames = 2
+frame_0/texture = ExtResource("1_n2dyr")
+frame_1/texture = ExtResource("2_hsswy")
+frame_1/duration = 1.0
+
+[resource]
+script = ExtResource("2_n2dyr")
+Name = "Ледяной гриб"
+Icon = SubResource("AnimatedTexture_0ofvn")
+FireIceValue = -0.020000000000000018

@@ -11,14 +11,13 @@ size = Vector2(115, 118)
 [sub_resource type="LabelSettings" id="LabelSettings_4kxuq"]
 font_size = 41
 
-[node name="Cauldron" type="Area2D" unique_id=570166040 node_paths=PackedStringArray("WarningLabel", "BrewButton", "Inventory")]
+[node name="Cauldron" type="Area2D" unique_id=570166040 node_paths=PackedStringArray("WarningLabel", "BrewButton")]
 position = Vector2(0, 1)
 script = ExtResource("1_0t22i")
 WarningLabel = NodePath("UI_Layer/WarningLabel")
 BrewButton = NodePath("UI_Layer/BrewButton")
 TargetRecipe = ExtResource("2_ju8ne")
 PotionScene = ExtResource("3_4kmeg")
-Inventory = NodePath("")
 metadata/_edit_vertical_guides_ = [-104.0]
 
 [node name="Cauldron_sprite" type="Sprite2D" parent="." unique_id=292398937]

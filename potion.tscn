@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://btgh0kicbc2qi" path="res://Potion.cs" id="1_174ht"]
 [ext_resource type="Texture2D" uid="uid://bgnfy0g7r2g6a" path="res://healing_potion.png" id="2_8parx"]
 
-[node name="Poition" type="Control" unique_id=1799079002]
+[node name="Poition" type="Control" unique_id=1799079002 node_paths=PackedStringArray("IconTexture", "NameLabel")]
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 3
 anchors_preset = 15
@@ -12,6 +12,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_174ht")
+IconTexture = NodePath("Icon")
+NameLabel = NodePath("NameLabel")
 
 [node name="NameLabel" type="Label" parent="." unique_id=1319355765]
 layout_mode = 1

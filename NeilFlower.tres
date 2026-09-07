@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="IngredientData" format=3 uid="uid://cq7nmypje8tpd"]
+
+[ext_resource type="Texture2D" uid="uid://bhh7jfbus10xv" path="res://assets/textures/nail_flower.png" id="1_2wtbu"]
+[ext_resource type="Script" uid="uid://dldi4kvkpuhub" path="res://IngredientData.cs" id="2_eq247"]
+
+[resource]
+script = ExtResource("2_eq247")
+Name = "NailFlower"
+Icon = ExtResource("1_2wtbu")
+FireIceValue = 0.030000000000000027

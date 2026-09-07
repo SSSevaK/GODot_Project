@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="PotionRecipe" format=3 uid="uid://bnbdnni6pvv48"]
+
+[ext_resource type="Texture2D" uid="uid://ckuhc5vpshn3b" path="res://assets/textures/mana_potion.png" id="1_8t4k0"]
+[ext_resource type="Script" uid="uid://h0x2oryr8qyt" path="res://PotionRecipe.cs" id="2_idxql"]
+
+[resource]
+script = ExtResource("2_idxql")
+PotionName = "Зелье Маны"
+Icon = ExtResource("1_8t4k0")
+TargetFireIceValue = 0.03000000000000025
+Tolerance = 0.02

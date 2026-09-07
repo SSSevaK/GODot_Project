@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dpg3o6pcq5kpd"
-path="res://.godot/imported/1.3 flame.jpg-c49575efcf17b058719c85705bf83561.ctex"
+uid="uid://bms664ntnuepl"
+path="res://.godot/imported/book_icon.png-25acc0def7ff3c63776aef8f47b2bbec.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://1.3 flame.jpg"
-dest_files=["res://.godot/imported/1.3 flame.jpg-c49575efcf17b058719c85705bf83561.ctex"]
+source_file="res://book_icon.png"
+dest_files=["res://.godot/imported/book_icon.png-25acc0def7ff3c63776aef8f47b2bbec.ctex"]
 
 [params]
 

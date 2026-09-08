@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://tlcno15urmcu"]
+
+[ext_resource type="Texture2D" uid="uid://0wuptic2yp0b" path="res://assets/textures/dialog_box.png" id="1_vhpn1"]
+
+[node name="Text_Tasks" type="StaticBody2D" unique_id=1610384351]
+
+[node name="DialogBox" type="Sprite2D" parent="." unique_id=1575154226]
+texture = ExtResource("1_vhpn1")

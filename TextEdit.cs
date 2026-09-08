@@ -3,16 +3,22 @@ using System;
 
 public partial class TextEdit : Godot.TextEdit
 {
+    // 1 HealFlask
     int Gold = 0;
+    int Gold_HealFlask = 100;
     private HealingPotion potionOnTable;
     public override void _Ready()
     {
+        AddThemeColorOverride("font_color", Colors.Black);
+        AddThemeColorOverride("font_readonly_color", Colors.Black);
+
         Text = Gold.ToString();
     }
 
     public void ForSell (int id)
     {
-        if (id == 1)
+        MainHero hero = GetTree().CurrentScene.GetNode<MainHero>("MainHero");
+        if (id == hero.NeedID)
         {
             GD.Print("Получено 100");
             Gold += 100;
@@ -24,9 +30,10 @@ public partial class TextEdit : Godot.TextEdit
             }
         }
 
-        if (id == 0)
+        if (id == 2)
         {
             GD.Print("Торговля");
+
         }
 
     }

@@ -1,0 +1,106 @@
+[gd_scene format=3 uid="uid://b858uffd8bvvl"]
+
+[ext_resource type="Script" uid="uid://cih1i4bk4obs5" path="res://RecipeBook.cs" id="1_r6dpa"]
+[ext_resource type="Resource" uid="uid://ym0pvtpf8opd" path="res://HealingPotion.tres" id="2_efodi"]
+[ext_resource type="Texture2D" uid="uid://dowrdam5302mn" path="res://book.png" id="2_ssb4j"]
+[ext_resource type="Resource" uid="uid://bnbdnni6pvv48" path="res://ManaPotion.tres" id="3_ly2rd"]
+
+[node name="RecipeBook" type="Control" unique_id=656402067 node_paths=PackedStringArray("PotionNameLabel", "PotionIconRect", "IngredientsLabel", "ChoseButton", "PrevButton", "NextButton", "CloseButton")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 21.0
+offset_top = -1.0
+offset_right = 8.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_r6dpa")
+PotionNameLabel = NodePath("LeftPage/PotionName")
+PotionIconRect = NodePath("LeftPage/PotionIcon")
+IngredientsLabel = NodePath("RightPage/IngredientsPlaceholder")
+ChoseButton = NodePath("RightPage/ChoseButton")
+PrevButton = NodePath("PrevButton")
+NextButton = NodePath("NextButton")
+CloseButton = NodePath("CloseButton")
+Recipes = Array[Object]([ExtResource("2_efodi"), ExtResource("3_ly2rd")])
+
+[node name="BackGround" type="TextureRect" parent="." unique_id=610832224]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 36.0
+offset_right = 590.0
+offset_bottom = 355.0
+texture = ExtResource("2_ssb4j")
+expand_mode = 1
+
+[node name="RightPage" type="Panel" parent="." unique_id=923069199]
+layout_mode = 0
+offset_left = 315.0
+offset_top = 49.0
+offset_right = 572.0
+offset_bottom = 333.0
+
+[node name="IngredientsPlaceholder" type="Label" parent="RightPage" unique_id=804423789]
+layout_mode = 0
+offset_left = 58.0
+offset_top = 9.0
+offset_right = 169.0
+offset_bottom = 32.0
+text = "Recipe-???"
+
+[node name="ChoseButton" type="Button" parent="RightPage" unique_id=1233420605]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 234.0
+offset_right = 171.0
+offset_bottom = 265.0
+text = "Chose Recipe"
+
+[node name="LeftPage" type="Panel" parent="." unique_id=45579176]
+layout_mode = 0
+offset_left = 51.0
+offset_top = 51.0
+offset_right = 307.0
+offset_bottom = 331.0
+
+[node name="PotionName" type="Label" parent="LeftPage" unique_id=381156063]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 4.0
+offset_right = 166.0
+offset_bottom = 72.0
+
+[node name="PotionIcon" type="TextureRect" parent="LeftPage" unique_id=1208900256]
+layout_mode = 0
+offset_left = 167.0
+offset_top = 13.0
+offset_right = 239.0
+offset_bottom = 76.0
+
+[node name="PrevButton" type="Button" parent="." unique_id=1779647168]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.025
+anchor_bottom = 0.158
+offset_left = 52.0
+offset_top = 303.0
+offset_right = 64.325
+offset_bottom = 279.49
+text = "<-"
+
+[node name="NextButton" type="Button" parent="." unique_id=1048970926]
+layout_mode = 0
+offset_left = 543.0
+offset_top = 308.0
+offset_right = 569.0
+offset_bottom = 334.0
+text = "->"
+
+[node name="CloseButton" type="Button" parent="." unique_id=1175294199]
+layout_mode = 0
+offset_left = 557.0
+offset_top = 57.0
+offset_right = 565.0
+offset_bottom = 65.0

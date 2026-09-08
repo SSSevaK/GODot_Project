@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://dnwiwdc0bymxl"]
+
+[ext_resource type="Texture2D" uid="uid://c4x225dfkc7mx" path="res://Sevak_Assets/Задачи.png" id="1_qes7k"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qes7k"]
+
+[node name="Tasks" type="StaticBody2D" unique_id=1109655805]
+
+[node name="Задачи" type="Sprite2D" parent="." unique_id=10307521]
+position = Vector2(42, 0)
+texture = ExtResource("1_qes7k")
+
+[node name="TextEdit" type="TextEdit" parent="Задачи" unique_id=1565700923]
+offset_left = -156.0
+offset_top = -16.0
+offset_right = 87.0
+offset_bottom = -4.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 8
+theme_override_styles/normal = SubResource("StyleBoxEmpty_qes7k")
+text = "Доработать инвентарь зелий"
+
+[node name="TextEdit2" type="TextEdit" parent="Задачи" unique_id=885032491]
+offset_left = -156.0
+offset_right = 94.0
+offset_bottom = 21.0
+theme_override_font_sizes/font_size = 12
+text = "Сделать блокнот"

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b8v1par1xjw7k"
-path="res://.godot/imported/1.2 flame.jpg-32864c8335cab3c3fe03da845b26ebf1.ctex"
+uid="uid://uvnqvrs4j7ea"
+path="res://.godot/imported/cauldron_shadow.png-2b7a11495a4d5b175de982dd9d580776.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://1.2 flame.jpg"
-dest_files=["res://.godot/imported/1.2 flame.jpg-32864c8335cab3c3fe03da845b26ebf1.ctex"]
+source_file="res://cauldron_shadow.png"
+dest_files=["res://.godot/imported/cauldron_shadow.png-2b7a11495a4d5b175de982dd9d580776.ctex"]
 
 [params]
 

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c7giupltwvgrb"]
 
-[ext_resource type="Texture2D" uid="uid://dfwueco27gk0b" path="res://Gemini_Generated_Image_h90etsh90etsh90e-removebg-preview.png" id="1_jd0nb"]
+[ext_resource type="Texture2D" uid="uid://6154gqndouax" path="res://table.png" id="1_0af1p"]
 
 [node name="Table_lab" type="Node2D" unique_id=151802696]
 position = Vector2(332, 131)
@@ -8,4 +8,6 @@ position = Vector2(332, 131)
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1150622973]
 position = Vector2(1.5258789e-05, 111)
 scale = Vector2(0.7409528, 0.67987806)
-texture = ExtResource("1_jd0nb")
+
+[node name="Table" type="Sprite2D" parent="." unique_id=945631238]
+texture = ExtResource("1_0af1p")

@@ -27,14 +27,14 @@ public partial class Burner : Area2D
 	{
 		if (ingredient.ItemData is IngredientData itemData)
 		{
-			float val = itemData.FireIceValue; // Значение от 0.0 до 1.0
+			float val = itemData.FireIceValue; // Значение от -1.0 до 1.0
 
-			if (val < 0.4f)
+			if (val < 0f)
 			{
 				// Предмет ближе к Льду -> слабый огонь
 				SetFlameState("weak");
 			}
-			else if (val > 0.6f)
+			else if (val > 0f)
 			{
 				// Предмет ближе к Огню -> сильный огонь
 				SetFlameState("strong");

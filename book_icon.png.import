@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://x3stexem3v36"
-path="res://.godot/imported/Gemini_Generated_Image_p3492vp3492vp349-removebg-preview.png-2dfa074db16508fc95abf3812d36df70.ctex"
+uid="uid://bms664ntnuepl"
+path="res://.godot/imported/book_icon.png-25acc0def7ff3c63776aef8f47b2bbec.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Gemini_Generated_Image_p3492vp3492vp349-removebg-preview.png"
-dest_files=["res://.godot/imported/Gemini_Generated_Image_p3492vp3492vp349-removebg-preview.png-2dfa074db16508fc95abf3812d36df70.ctex"]
+source_file="res://book_icon.png"
+dest_files=["res://.godot/imported/book_icon.png-25acc0def7ff3c63776aef8f47b2bbec.ctex"]
 
 [params]
 

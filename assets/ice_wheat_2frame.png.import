@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cu3emp5pmr0w3"
-path="res://.godot/imported/trading_booth.png-6ecf9fbd969d5e4b1c47bb36c013cd42.ctex"
+uid="uid://d2gwj2v5d8es"
+path="res://.godot/imported/ice_wheat_2frame.png-deaabf57ed32f7db05e78a40286233df.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/trading_booth.png"
-dest_files=["res://.godot/imported/trading_booth.png-6ecf9fbd969d5e4b1c47bb36c013cd42.ctex"]
+source_file="res://assets/ice_wheat_2frame.png"
+dest_files=["res://.godot/imported/ice_wheat_2frame.png-deaabf57ed32f7db05e78a40286233df.ctex"]
 
 [params]
 

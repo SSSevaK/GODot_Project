@@ -36,8 +36,8 @@ position = Vector2(438, 585)
 position = Vector2(442, 587)
 
 [node name="TextEdit" type="TextEdit" parent="." unique_id=595458602]
-offset_left = 560.0
-offset_top = 288.0
-offset_right = 743.0
-offset_bottom = 335.0
+offset_left = 570.0
+offset_top = 290.0
+offset_right = 753.0
+offset_bottom = 337.0
 script = ExtResource("8_1bede")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dl5p2tmwk7k67"
-path="res://.godot/imported/alchmy_book.png-deb65ef5141768a364690de0a952c563.ctex"
+uid="uid://c7vciqe83nqcr"
+path="res://.godot/imported/ice_wheat_1frame.png-83de77af92bc86fd97ed264642767d08.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/alchmy_book.png"
-dest_files=["res://.godot/imported/alchmy_book.png-deb65ef5141768a364690de0a952c563.ctex"]
+source_file="res://assets/ice_wheat_1frame.png"
+dest_files=["res://.godot/imported/ice_wheat_1frame.png-83de77af92bc86fd97ed264642767d08.ctex"]
 
 [params]
 

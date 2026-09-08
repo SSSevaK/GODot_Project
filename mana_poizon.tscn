@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://1o3sjhyfucbd"]
+
+[ext_resource type="Texture2D" uid="uid://ckuhc5vpshn3b" path="res://assets/textures/mana_potion.png" id="1_dkkge"]
+[ext_resource type="Script" uid="uid://cgxxri3nxuemw" path="res://ManaPotion.cs" id="2_apdea"]
+
+[node name="mana_poizon" type="StaticBody2D" unique_id=1510911487]
+
+[node name="ManaPotion" type="Sprite2D" parent="." unique_id=1124138699]
+position = Vector2(0, -1)
+texture = ExtResource("1_dkkge")
+script = ExtResource("2_apdea")

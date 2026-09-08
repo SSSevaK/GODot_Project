@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://dxovr54e3pbd8"]
+
+[ext_resource type="Texture2D" uid="uid://duevlt7m28gmy" path="res://Sevak_Assets/abdd1de3-7ade-4fe1-9801-c7108fe7677a.png" id="1_k1yc0"]
+[ext_resource type="Script" uid="uid://mirwon0rinc4" path="res://Abdd1De37Ade4Fe19801c7108Fe7677a.cs" id="2_j4adg"]
+
+[node name="gold_bag" type="StaticBody2D" unique_id=937258237]
+
+[node name="Abdd1De37Ade4Fe19801c7108Fe7677a" type="Sprite2D" parent="." unique_id=1790424269]
+position = Vector2(0, -2.0000002)
+scale = Vector2(0.03907496, 0.03907496)
+texture = ExtResource("1_k1yc0")
+script = ExtResource("2_j4adg")

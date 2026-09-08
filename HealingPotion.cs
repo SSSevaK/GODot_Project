@@ -7,9 +7,10 @@ public partial class HealingPotion : Sprite2D
     private PackedScene gold_bag;
     bool input = false;
     bool check = false;
-    public int ID;
+        
     [Signal]
     public delegate void ItemInZoneEventHandler(int id);
+
     public override void _Ready()
     {
        gold_bag = GD.Load<PackedScene>("res://gold_bag.tscn");
@@ -24,16 +25,12 @@ public partial class HealingPotion : Sprite2D
         }
         Rect2 zone = new Rect2(633, 531, 100, 10    );
         Rect2 Poisonzone = new Rect2(GlobalPosition - Texture.GetSize()/2,  Texture.GetSize());
-if (zone.Intersects(Poisonzone) && !check)
-{
-    MainHero hero = GetTree().CurrentScene.GetNode<MainHero>("MainHero");
-
-    if (hero.NeedID == ID)
-    {
-        EmitSignal(SignalName.ItemInZone, hero.NeedID);
-        check = true;
-    }
-}
+        if (zone.Intersects(Poisonzone) && !check)
+        {
+            EmitSignal(SignalName.ItemInZone, 1);
+            check = true;
+            GD.Print("yes");
+        }
         if (!zone.Intersects(Poisonzone) && check)
         {
             check = false;
@@ -64,21 +61,14 @@ if (zone.Intersects(Poisonzone) && !check)
                 input = false;
                 if (check)
                 {
-                    MainHero hero = GetTree().CurrentScene.GetNode<MainHero>("MainHero");
-
-                    if (hero.NeedID == ID)
+                    if (bag != null)
                     {
-                        if (bag != null)
-                        {
-                            bag.QueueFree();
-                        }
-
-                        bag = gold_bag.Instantiate<Node2D>();
-                        GetTree().CurrentScene.AddChild(bag);
-                        bag.GlobalPosition = new Vector2(590, 535);
-
-                        GetTree().CurrentScene.GetNode<TextEdit>("TextEdit").SetPotion(this);
+                        bag.QueueFree();
                     }
+                    bag = gold_bag.Instantiate<Node2D>();
+                    GetTree().CurrentScene.AddChild(bag);
+                    bag.GlobalPosition = new Vector2(590, 535);
+                    GetTree().CurrentScene.GetNode<TextEdit>("TextEdit").SetPotion(this);
                 }
                 if (!check)
                 {

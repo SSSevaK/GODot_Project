@@ -9,8 +9,6 @@ public partial class TextEdit : Godot.TextEdit
     private HealingPotion potionOnTable;
     public override void _Ready()
     {
-        AddThemeColorOverride("font_color", Colors.Black);
-        AddThemeColorOverride("font_readonly_color", Colors.Black);
 
         Text = Gold.ToString();
     }
@@ -18,7 +16,7 @@ public partial class TextEdit : Godot.TextEdit
     public void ForSell (int id)
     {
         MainHero hero = GetTree().CurrentScene.GetNode<MainHero>("MainHero");
-        if (id == hero.NeedID)
+        if (id == 1 && hero.NeedID == 1)
         {
             GD.Print("Получено 100");
             Gold += 100;

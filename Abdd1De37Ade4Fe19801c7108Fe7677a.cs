@@ -3,7 +3,7 @@ using System;
 
 public partial class Abdd1De37Ade4Fe19801c7108Fe7677a : Sprite2D
 {
-    public int ID;
+
     public override void _Ready()
     {
     }
@@ -24,8 +24,8 @@ public partial class Abdd1De37Ade4Fe19801c7108Fe7677a : Sprite2D
                 }
                 if (mouse.ButtonIndex == MouseButton.Left)
                 {
-                    GetTree().CurrentScene.GetNode<TextEdit>("TextEdit").ForSell(ID);
-                    GetTree().CurrentScene.GetNode<MainHero>("MainHero").Sell(ID);
+                    GetTree().CurrentScene.GetNode<TextEdit>("TextEdit").ForSell(1);
+                    GetTree().CurrentScene.GetNode<MainHero>("MainHero").Sell(1);
                     QueueFree();
                 }
 

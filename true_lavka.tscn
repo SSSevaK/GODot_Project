@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://cq10oa7qe6wxd"]
+
+[ext_resource type="PackedScene" uid="uid://dbd0p5kyw0724" path="res://white.tscn" id="1_1bede"]
+[ext_resource type="Texture2D" uid="uid://cu3emp5pmr0w3" path="res://assets/textures/trading_booth.png" id="1_rkshm"]
+[ext_resource type="Script" uid="uid://cikuym6moyj4n" path="res://White.cs" id="2_56b06"]
+[ext_resource type="PackedScene" uid="uid://cjpevf7xeunnl" path="res://healing_poizon.tscn" id="3_th6vq"]
+[ext_resource type="Texture2D" uid="uid://b7c5fsae77lw2" path="res://assets/textures/alchemy_lamp.png" id="3_u1aty"]
+[ext_resource type="PackedScene" uid="uid://2vt6vdr04fmi" path="res://main.tscn" id="4_u1aty"]
+[ext_resource type="PackedScene" uid="uid://1o3sjhyfucbd" path="res://mana_poizon.tscn" id="5_cux8q"]
+[ext_resource type="Script" uid="uid://dffir3mmhj1j7" path="res://TextEdit.cs" id="8_1bede"]
+
+[node name="True_lavka" type="Node2D" unique_id=1057666998]
+
+[node name="White" parent="." unique_id=1998657987 instance=ExtResource("1_1bede")]
+position = Vector2(152, 457)
+script = ExtResource("2_56b06")
+
+[node name="TradingBooth" type="Sprite2D" parent="." unique_id=699631082]
+position = Vector2(513, 467)
+texture = ExtResource("1_rkshm")
+
+[node name="AlchemyLamp" type="Sprite2D" parent="." unique_id=1868626617]
+position = Vector2(268, 522)
+texture = ExtResource("3_u1aty")
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=161837520]
+position = Vector2(590, 535)
+
+[node name="healing_poizon" parent="." unique_id=2048465825 instance=ExtResource("3_th6vq")]
+position = Vector2(391, 584)
+
+[node name="Main" parent="." unique_id=1887326427 instance=ExtResource("4_u1aty")]
+position = Vector2(438, 585)
+
+[node name="mana_poizon" parent="." unique_id=1510911487 instance=ExtResource("5_cux8q")]
+position = Vector2(442, 587)
+
+[node name="TextEdit" type="TextEdit" parent="." unique_id=595458602]
+offset_left = 570.0
+offset_top = 290.0
+offset_right = 753.0
+offset_bottom = 337.0
+script = ExtResource("8_1bede")

@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://cjpevf7xeunnl"]
+
+[ext_resource type="Texture2D" uid="uid://b7hh2wwxh0kk3" path="res://assets/textures/healing_potion.png" id="1_kkulj"]
+[ext_resource type="Script" uid="uid://35qtr5kfsitc" path="res://HealingPotion.cs" id="2_cpi2s"]
+
+[node name="healing_poizon" type="StaticBody2D" unique_id=2048465825]
+
+[node name="HealingPotion" type="Sprite2D" parent="." unique_id=1077471998]
+position = Vector2(1, 0)
+texture = ExtResource("1_kkulj")
+script = ExtResource("2_cpi2s")

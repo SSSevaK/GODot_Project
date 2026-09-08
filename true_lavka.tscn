@@ -42,16 +42,16 @@ position = Vector2(268, 522)
 texture = ExtResource("3_u1aty")
 
 [node name="Marker2D" type="Marker2D" parent="." unique_id=161837520]
-position = Vector2(100, 441)
+position = Vector2(444, 588)
 
 [node name="healing_poizon" parent="." unique_id=2048465825 instance=ExtResource("3_th6vq")]
-position = Vector2(391, 584)
+position = Vector2(393, 585)
 
 [node name="Main" parent="." unique_id=1887326427 instance=ExtResource("4_u1aty")]
 position = Vector2(438, 585)
 
 [node name="mana_poizon" parent="." unique_id=1510911487 instance=ExtResource("5_cux8q")]
-position = Vector2(442, 587)
+position = Vector2(444, 588)
 
 [node name="DialogBox" type="Sprite2D" parent="." unique_id=1833932678]
 position = Vector2(99.00001, 37)

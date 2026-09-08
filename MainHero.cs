@@ -48,16 +48,12 @@ public partial class MainHero : StaticBody2D
         {
             Text.Text = "I need Potion";
         }
-        else if (NeedID == 3)
-        {
-            Text.Text = "I need Food";
-        }
 
         check = true;
     }
     private void Generate()
     {
-        NeedID = GD.RandRange(1, 3);
+        NeedID = GD.RandRange(1, 2);
 
         GD.Print("Новое предложение: NeedID = ", NeedID);
     }
@@ -74,7 +70,7 @@ public partial class MainHero : StaticBody2D
             check = false;
 
             Tween tween = CreateTween();
-            tween.TweenProperty(this, "position", ExitPosition, 3f);
+            tween.TweenProperty(this, "position", ExitPosition, 1f);
 
             tween.Finished += NewOffer;
         }

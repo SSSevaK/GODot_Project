@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cnumpmhq8pogx"]
+
+[ext_resource type="Texture2D" uid="uid://c4bp7uyedcfn3" path="res://assets/textures/scythe.png" id="1_oxtoa"]
+
+[node name="Serp" type="StaticBody2D" unique_id=581385052]
+
+[node name="Scythe" type="Sprite2D" parent="." unique_id=1720417313]
+position = Vector2(0, 1)
+texture = ExtResource("1_oxtoa")

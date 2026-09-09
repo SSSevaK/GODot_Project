@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://c3bipjrdf3or8"]
+
+[ext_resource type="Texture2D" uid="uid://cey1h4wt2c0qw" path="res://assets/textures/arrow.png" id="1_7qplb"]
+
+[node name="ToOgorod" type="StaticBody2D" unique_id=1020262627]
+
+[node name="Arrow" type="Sprite2D" parent="." unique_id=2125074480]
+position = Vector2(1, 0)
+rotation = -0.4660029
+texture = ExtResource("1_7qplb")
+flip_h = true

@@ -3,16 +3,18 @@
 [ext_resource type="Texture2D" uid="uid://yewskvq2xb3q" path="res://background.png" id="1_0n04c"]
 [ext_resource type="Script" uid="uid://dn1hbdsa4h301" path="res://LabScene.cs" id="1_7ejqq"]
 [ext_resource type="PackedScene" uid="uid://dpcgthexowpjs" path="res://ingredient.tscn" id="1_fup07"]
+[ext_resource type="Texture2D" uid="uid://cey1h4wt2c0qw" path="res://assets/textures/arrow.png" id="2_tg7a1"]
 [ext_resource type="PackedScene" uid="uid://px8b4kqvrfjm" path="res://cauldron.tscn" id="4_68esv"]
 [ext_resource type="PackedScene" uid="uid://dgod24uc0kb8t" path="res://slot.tscn" id="4_qqmqv"]
 [ext_resource type="PackedScene" uid="uid://c7giupltwvgrb" path="res://table_lab.tscn" id="5_68esv"]
 [ext_resource type="PackedScene" uid="uid://b210qkhwk2gif" path="res://burner.tscn" id="6_qqmqv"]
 [ext_resource type="Resource" uid="uid://cq7nmypje8tpd" path="res://NeilFlower.tres" id="8_0ofvn"]
 [ext_resource type="PackedScene" uid="uid://c2p8pat6fsjy5" path="res://potion_inventory.tscn" id="8_51c52"]
-[ext_resource type="Texture2D" uid="uid://da37iq1bfkia2" path="res://assets/textures/ultramarine.png" id="9_tg7a1"]
 [ext_resource type="Texture2D" uid="uid://bms664ntnuepl" path="res://book_icon.png" id="10_62n56"]
 [ext_resource type="Script" uid="uid://c170sekx31cvp" path="res://SceneTransition.cs" id="10_mg78p"]
 [ext_resource type="PackedScene" uid="uid://b858uffd8bvvl" path="res://recipe_book.tscn" id="11_tg7a1"]
+[ext_resource type="PackedScene" uid="uid://c3bipjrdf3or8" path="res://to_ogorod.tscn" id="14_4iujs"]
+[ext_resource type="Script" uid="uid://esrc85r3glyb" path="res://ToOgorod.cs" id="15_go2be"]
 
 [node name="Lab_Scene" type="Node2D" unique_id=134316402 node_paths=PackedStringArray("OpenBookButton", "BookUI", "CauldronNode")]
 script = ExtResource("1_7ejqq")
@@ -25,7 +27,7 @@ offset_left = -2.0
 offset_top = 147.0
 offset_right = 52.0
 offset_bottom = 237.0
-icon = ExtResource("9_tg7a1")
+icon = ExtResource("2_tg7a1")
 flat = true
 autowrap_trim_flags = 0
 expand_icon = true
@@ -137,3 +139,7 @@ ItemData = ExtResource("8_0ofvn")
 z_index = 2
 position = Vector2(102, 267)
 ItemData = ExtResource("8_0ofvn")
+
+[node name="ToOgorod" parent="." unique_id=1020262627 instance=ExtResource("14_4iujs")]
+position = Vector2(597, 28)
+script = ExtResource("15_go2be")

@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://www0vggagv7u"]
+
+[ext_resource type="Texture2D" uid="uid://8cs8m300bwce" path="res://assets/textures/pot.png" id="1_15rtx"]
+
+[node name="Gorshok" type="StaticBody2D" unique_id=1682622543]
+
+[node name="Pot" type="Sprite2D" parent="." unique_id=847631801]
+texture = ExtResource("1_15rtx")

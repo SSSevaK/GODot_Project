@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://c0qg7uwa6pqsr"]
+
+[ext_resource type="Texture2D" uid="uid://cey1h4wt2c0qw" path="res://assets/textures/arrow.png" id="1_l5ahi"]
+
+[node name="Arrow" type="StaticBody2D" unique_id=145565114]
+
+[node name="Arrow" type="Sprite2D" parent="." unique_id=1969332998]
+rotation = -0.53232545
+texture = ExtResource("1_l5ahi")

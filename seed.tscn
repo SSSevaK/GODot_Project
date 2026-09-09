@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cjf2sm2km8gej"]
+
+[ext_resource type="Texture2D" uid="uid://ci1jkfklnptnt" path="res://assets/textures/nail_seeds.png" id="1_a1cqr"]
+
+[node name="Seed" type="StaticBody2D" unique_id=113429048]
+
+[node name="NailSeeds" type="Sprite2D" parent="." unique_id=726089287]
+position = Vector2(1, 0)
+texture = ExtResource("1_a1cqr")

@@ -7,9 +7,9 @@
 [ext_resource type="Script" uid="uid://dffir3mmhj1j7" path="res://GoldCounter.cs" id="8_1bede"]
 [ext_resource type="Script" uid="uid://2qvlsrlsgku1" path="res://MainHero.cs" id="8_56b06"]
 [ext_resource type="Texture2D" uid="uid://0wuptic2yp0b" path="res://assets/textures/dialog_box.png" id="9_56b06"]
-[ext_resource type="Texture2D" uid="uid://da37iq1bfkia2" path="res://assets/textures/ultramarine.png" id="9_i8e77"]
-[ext_resource type="Script" uid="uid://c170sekx31cvp" path="res://SceneTransition.cs" id="10_mjkyq"]
+[ext_resource type="PackedScene" uid="uid://dgo1xf7ccfa0e" path="res://to_var.tscn" id="10_i8e77"]
 [ext_resource type="PackedScene" uid="uid://bnokexfbo8fv0" path="res://shop_inventory.tscn" id="11_mjkyq"]
+[ext_resource type="Script" uid="uid://tj6k27xjvdcj" path="res://ToVar.cs" id="11_uok8s"]
 [ext_resource type="PackedScene" uid="uid://cene7phwu5he0" path="res://potion.tscn" id="12_uok8s"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jogxj"]
@@ -57,18 +57,6 @@ offset_right = 199.0
 offset_bottom = 59.0
 script = ExtResource("8_1bede")
 
-[node name="SceneTransition-shop" type="Button" parent="." unique_id=1219284627]
-offset_left = 595.0
-offset_top = 169.0
-offset_right = 642.0
-offset_bottom = 223.0
-scale = Vector2(1, 0.9697325)
-icon = ExtResource("9_i8e77")
-flat = true
-expand_icon = true
-script = ExtResource("10_mjkyq")
-TargetScenePath = "uid://b0gl5ycev2mkq"
-
 [node name="ShopInventory" parent="." unique_id=1056859167 node_paths=PackedStringArray("ShopSlotsParent") instance=ExtResource("11_mjkyq")]
 position = Vector2(133, 275)
 PotionScene = ExtResource("12_uok8s")
@@ -106,3 +94,7 @@ theme_override_styles/normal = SubResource("StyleBoxEmpty_uok8s")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_qo0qd")
 theme_override_styles/read_only = SubResource("StyleBoxEmpty_l02uf")
 editable = false
+
+[node name="ToVar" parent="." unique_id=1869272909 instance=ExtResource("10_i8e77")]
+position = Vector2(609, 181)
+script = ExtResource("11_uok8s")

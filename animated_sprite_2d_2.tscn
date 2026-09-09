@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://dmvr3k81bg31y"]
+
+[ext_resource type="Texture2D" uid="uid://m5ckgrg6fk2k" path="res://assets/textures/nail_flower_growing.png" id="1_0uv7j"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dvixm"]
+atlas = ExtResource("1_0uv7j")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_otjy4"]
+atlas = ExtResource("1_0uv7j")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ojemy"]
+atlas = ExtResource("1_0uv7j")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rh76o"]
+atlas = ExtResource("1_0uv7j")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p210f"]
+atlas = ExtResource("1_0uv7j")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w4eyw"]
+atlas = ExtResource("1_0uv7j")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tyl5c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dvixm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_otjy4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ojemy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rh76o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p210f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w4eyw")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 0.2
+}]
+
+[node name="AnimatedSprite2D_2" type="AnimatedSprite2D" unique_id=1579559506]
+sprite_frames = SubResource("SpriteFrames_tyl5c")

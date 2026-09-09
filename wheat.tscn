@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cjlrwnc6rico6"]
+
+[ext_resource type="Texture2D" uid="uid://ctg6vbhby3bgd" path="res://assets/textures/wheat_seeds.png" id="1_n1xnp"]
+
+[node name="Wheat" type="StaticBody2D" unique_id=967310301]
+
+[node name="WheatSeeds" type="Sprite2D" parent="." unique_id=1865519375]
+texture = ExtResource("1_n1xnp")

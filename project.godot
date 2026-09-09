@@ -16,6 +16,10 @@ config/features=PackedStringArray("4.7", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 <<<<<<<HEADrun/main_scene="uid://b0gl5ycev2mkq"
 
+[autoload]
+
+GameManager="*uid://b03rjejo3a8q8"
+
 [display]
 
 window/size/viewport_width=640

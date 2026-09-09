@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dbd0p5kyw0724"]
 
-[ext_resource type="Texture2D" uid="uid://c00gd1t0def03" path="res://Sevak_Assets/Уолтер вайт.png" id="1_ucyky"]
+[ext_resource type="Texture2D" uid="uid://da37iq1bfkia2" path="res://assets/textures/ultramarine.png" id="1_ucyky"]
 
 [node name="White" type="StaticBody2D" unique_id=1998657987]
 

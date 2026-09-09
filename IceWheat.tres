@@ -14,4 +14,4 @@ frame_1/duration = 1.0
 script = ExtResource("2_n2dyr")
 Name = "Ледяной гриб"
 Icon = SubResource("AnimatedTexture_0ofvn")
-FireIceValue = -0.020000000000000018
+FireIceValue = -0.02000000000000001

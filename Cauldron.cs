@@ -56,29 +56,35 @@ public partial class Cauldron : Area2D
 	}
 
 	private void BrewPotion()
+{
+	float difference = Mathf.Abs(_currentFireIceValue - TargetRecipe.TargetFireIceValue);
+
+	if (difference <= TargetRecipe.Tolerance)
 	{
-		float difference = Mathf.Abs(_currentFireIceValue - TargetRecipe.TargetFireIceValue);
+		ShowWarning($"Сварено: {TargetRecipe.PotionName}!");
 
-		if (difference <= TargetRecipe.Tolerance)
+		// 1. Сохраняем рецепт в глобальную память
+		GameManager.Instance.AddPotion(TargetRecipe);
+
+		// 2. Отображаем в локальном UI инвентаря (если сцена Potion.tscn создается сразу)
+		Potion newPotion = PotionScene.Instantiate<Potion>();
+		newPotion.Setup(TargetRecipe); // Здесь передается ресур с текстурой маны!
+
+		// Записываем данные в менеджер для смены сцен
+		
+
+		if (Inventory != null)
 		{
-			ShowWarning($"Сварено: {TargetRecipe.PotionName}!");
-			Potion newPotion = PotionScene.Instantiate<Potion>();
-	
-			// Настройка иконки (через метод или напрямую через GetNode)
-			var iconNode = newPotion.GetNodeOrNull<TextureRect>("Icon");
-
-			iconNode.Texture = TargetRecipe.Icon;
-   			iconNode.ExpandMode = TextureRect.ExpandModeEnum.IgnoreSize;
-   			iconNode.StretchMode = TextureRect.StretchModeEnum.KeepAspectCentered;
 			Inventory.AddPotionNode(newPotion);
-			GD.Print($"[CAULDRON] Успешно сварено зелье: {TargetRecipe.ResourceName}");
 		}
-		else
-		{
-			ShowWarning("Варка не удалась! Получилась жижа.");
-		}
-		ClearCauldron();
 	}
+	else
+	{
+		ShowWarning("Варка не удалась! Получилась жижа.");
+	}
+
+	ClearCauldron();
+}
 
 	private void ShowWarning(string text)
 	{

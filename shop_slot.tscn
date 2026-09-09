@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://0nfmexcw1lmn"]
+
+[ext_resource type="Script" uid="uid://bkmcwa4qvb1lv" path="res://ShopSlot.cs" id="1_6h8wq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4kxuq"]
+size = Vector2(28, 29)
+
+[node name="ShopSlot" type="Area2D" unique_id=1313262283]
+script = ExtResource("1_6h8wq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=731689214]
+shape = SubResource("RectangleShape2D_4kxuq")

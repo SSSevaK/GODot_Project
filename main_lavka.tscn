@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://cvpdb2f72ed12"]
+
+[ext_resource type="PackedScene" uid="uid://c5x4v6478jll2" path="res://flask.tscn" id="1_kqvm2"]
+[ext_resource type="PackedScene" uid="uid://dhqx14hsb3g5l" path="res://skales.tscn" id="2_67153"]
+[ext_resource type="PackedScene" uid="uid://c7giupltwvgrb" path="res://table_lab.tscn" id="3_d0li4"]
+[ext_resource type="PackedScene" uid="uid://dbd0p5kyw0724" path="res://white.tscn" id="4_xldjh"]
+[ext_resource type="Script" uid="uid://dffir3mmhj1j7" path="res://GoldCounter.cs" id="5_67153"]
+
+[node name="Node2D" type="Node2D" unique_id=133561643]
+
+[node name="Table" parent="." unique_id=1018577840 instance=ExtResource("3_d0li4")]
+position = Vector2(491, 601)
+
+[node name="Skales" parent="." unique_id=991409498 instance=ExtResource("2_67153")]
+position = Vector2(335, 512)
+
+[node name="White" parent="." unique_id=1998657987 instance=ExtResource("4_xldjh")]
+position = Vector2(696, 498)
+
+[node name="flask" parent="." unique_id=251120625 instance=ExtResource("1_kqvm2")]
+position = Vector2(317, 601)
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=962366264]
+position = Vector2(367, 519)
+
+[node name="TextEdit" type="TextEdit" parent="." unique_id=2019726678]
+offset_left = 350.0
+offset_top = 393.0
+offset_right = 578.0
+offset_bottom = 469.0
+theme_override_font_sizes/font_size = 12
+script = ExtResource("5_67153")

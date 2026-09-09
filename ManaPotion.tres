@@ -6,6 +6,8 @@
 [resource]
 script = ExtResource("2_idxql")
 PotionName = "Зелье Маны"
+ID = 2
+Price = 110
 Icon = ExtResource("1_8t4k0")
 TargetFireIceValue = 0.03000000000000025
 Tolerance = 0.02

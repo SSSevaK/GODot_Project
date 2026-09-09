@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c2p8pat6fsjy5"]
 
 [ext_resource type="Script" uid="uid://bba350qk2uarf" path="res://PotionInventory.cs" id="1_kjt8o"]
+[ext_resource type="PackedScene" uid="uid://cene7phwu5he0" path="res://potion.tscn" id="2_b3mpd"]
 [ext_resource type="PackedScene" uid="uid://bh1arg2m6o4du" path="res://potion_slot.tscn" id="2_sqeu4"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sqeu4"]
@@ -20,7 +21,7 @@ corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 corner_detail = 6
 
-[node name="PoitionInventory" type="Control" unique_id=1013624139 node_paths=PackedStringArray("OpenButton", "InventoryPanel", "SlotsGrid")]
+[node name="PoitionInventory" type="Control" unique_id=1013624139 node_paths=PackedStringArray("OpenButton", "InventoryPanel", "SlotsGrid", "PotionsHolder")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -31,6 +32,9 @@ script = ExtResource("1_kjt8o")
 OpenButton = NodePath("OpenButton")
 InventoryPanel = NodePath("InventoryPanel")
 SlotsGrid = NodePath("InventoryPanel/GridContainer")
+PotionsHolder = NodePath("PotionsHolder")
+PotionScene = ExtResource("2_b3mpd")
+SlotScene = ExtResource("2_sqeu4")
 
 [node name="OpenButton" type="Button" parent="." unique_id=413438471]
 layout_mode = 0
@@ -80,3 +84,5 @@ layout_mode = 2
 [node name="PotionSlot" parent="InventoryPanel/GridContainer" unique_id=480415170 instance=ExtResource("2_sqeu4")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_sqeu4")
+
+[node name="PotionsHolder" type="Node2D" parent="." unique_id=1463296365]

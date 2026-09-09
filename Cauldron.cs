@@ -11,15 +11,17 @@ public partial class Cauldron : Area2D
 
 	[ExportGroup("Ресурсы и Сцены")]
 	[Export] public PotionRecipe TargetRecipe { get; set; }
-	[Export] public PackedScene PotionScene { get; set; } // Сдаём сюда Potion.tscn!
+	[Export] public PackedScene PotionScene { get; set; }
 	[Export] public PotionInventory Inventory { get; set; }
 
 	public override void _Ready()
 	{
 		if (WarningLabel != null)
+		{
 			WarningLabel.Modulate = new Color(1, 1, 1, 0);
 			WarningLabel.HorizontalAlignment = HorizontalAlignment.Center;
 			WarningLabel.VerticalAlignment = VerticalAlignment.Center;
+		}
 
 		if (BrewButton != null)
 			BrewButton.Pressed += OnBrewButtonPressed;
@@ -46,6 +48,12 @@ public partial class Cauldron : Area2D
 
 	private void OnBrewButtonPressed()
 	{
+		if (TargetRecipe == null)
+		{
+			ShowWarning("Рецепт не выбран!");
+			return;
+		}
+
 		if (_ingredientsInCauldron.Count == 0)
 		{
 			ShowWarning("Котёл пуст!");
@@ -62,21 +70,27 @@ public partial class Cauldron : Area2D
 		if (difference <= TargetRecipe.Tolerance)
 		{
 			ShowWarning($"Сварено: {TargetRecipe.PotionName}!");
-			Potion newPotion = PotionScene.Instantiate<Potion>();
-	
-			// Настройка иконки (через метод или напрямую через GetNode)
-			var iconNode = newPotion.GetNodeOrNull<TextureRect>("Icon");
 
-			iconNode.Texture = TargetRecipe.Icon;
-   			iconNode.ExpandMode = TextureRect.ExpandModeEnum.IgnoreSize;
-   			iconNode.StretchMode = TextureRect.StretchModeEnum.KeepAspectCentered;
-			Inventory.AddPotionNode(newPotion);
-			GD.Print($"[CAULDRON] Успешно сварено зелье: {TargetRecipe.ResourceName}");
+			// 1. Сохраняем рецепт в глобальный менеджер
+			GameManager.Instance.AddPotion(TargetRecipe);
+
+			// 2. Добавляем визуальный узел в панель инвентаря лаборатории
+			if (PotionScene != null)
+			{
+				Potion newPotion = PotionScene.Instantiate<Potion>();
+				newPotion.Setup(TargetRecipe);
+
+				if (Inventory != null)
+				{
+					Inventory.AddPotionNode(newPotion);
+				}
+			}
 		}
 		else
 		{
-			ShowWarning("Варка не удалась! Получилась жижа.");
+			GD.Print($"Варка не удалась! {_currentFireIceValue} vs {TargetRecipe.TargetFireIceValue}");
 		}
+
 		ClearCauldron();
 	}
 

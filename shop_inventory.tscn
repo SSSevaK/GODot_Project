@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://bnokexfbo8fv0"]
+
+[ext_resource type="Script" uid="uid://d3piysv06kwfr" path="res://ShopInventory.cs" id="1_b3flt"]
+[ext_resource type="PackedScene" uid="uid://0nfmexcw1lmn" path="res://shop_slot.tscn" id="2_736af"]
+
+[node name="ShopInventory" type="Node2D" unique_id=1056859167]
+script = ExtResource("1_b3flt")
+
+[node name="ShopSlot8" parent="." unique_id=1313262283 instance=ExtResource("2_736af")]
+position = Vector2(355, 24)
+
+[node name="ShopSlot2" parent="." unique_id=1803997170 instance=ExtResource("2_736af")]
+position = Vector2(18, 23)
+
+[node name="ShopSlot12" parent="." unique_id=2042788882 instance=ExtResource("2_736af")]
+position = Vector2(210, 62)
+
+[node name="ShopSlot13" parent="." unique_id=2115186451 instance=ExtResource("2_736af")]
+position = Vector2(211, 23)
+
+[node name="ShopSlot9" parent="." unique_id=1369230902 instance=ExtResource("2_736af")]
+position = Vector2(308, 23)
+
+[node name="ShopSlot" parent="." unique_id=493281023 instance=ExtResource("2_736af")]
+position = Vector2(67, 22)
+
+[node name="ShopSlot10" parent="." unique_id=2054027368 instance=ExtResource("2_736af")]
+position = Vector2(307, 61)
+
+[node name="ShopSlot14" parent="." unique_id=2030143463 instance=ExtResource("2_736af")]
+position = Vector2(260, 61)
+
+[node name="ShopSlot11" parent="." unique_id=1026216695 instance=ExtResource("2_736af")]
+position = Vector2(261, 24)
+
+[node name="ShopSlot3" parent="." unique_id=933083107 instance=ExtResource("2_736af")]
+position = Vector2(114, 23)
+
+[node name="ShopSlot4" parent="." unique_id=1857772922 instance=ExtResource("2_736af")]
+position = Vector2(164, 23)
+
+[node name="ShopSlot5" parent="." unique_id=106261324 instance=ExtResource("2_736af")]
+position = Vector2(66, 62)
+
+[node name="ShopSlot6" parent="." unique_id=1641261317 instance=ExtResource("2_736af")]
+position = Vector2(115, 60)
+
+[node name="ShopSlot7" parent="." unique_id=1210505849 instance=ExtResource("2_736af")]
+position = Vector2(163, 61)

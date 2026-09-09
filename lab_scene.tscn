@@ -9,7 +9,9 @@
 [ext_resource type="PackedScene" uid="uid://b210qkhwk2gif" path="res://burner.tscn" id="6_qqmqv"]
 [ext_resource type="Resource" uid="uid://cq7nmypje8tpd" path="res://NeilFlower.tres" id="8_0ofvn"]
 [ext_resource type="PackedScene" uid="uid://c2p8pat6fsjy5" path="res://potion_inventory.tscn" id="8_51c52"]
+[ext_resource type="Texture2D" uid="uid://da37iq1bfkia2" path="res://assets/textures/ultramarine.png" id="9_tg7a1"]
 [ext_resource type="Texture2D" uid="uid://bms664ntnuepl" path="res://book_icon.png" id="10_62n56"]
+[ext_resource type="Script" uid="uid://c170sekx31cvp" path="res://SceneTransition.cs" id="10_mg78p"]
 [ext_resource type="PackedScene" uid="uid://b858uffd8bvvl" path="res://recipe_book.tscn" id="11_tg7a1"]
 
 [node name="Lab_Scene" type="Node2D" unique_id=134316402 node_paths=PackedStringArray("OpenBookButton", "BookUI", "CauldronNode")]
@@ -17,6 +19,18 @@ script = ExtResource("1_7ejqq")
 OpenBookButton = NodePath("OpenBookButton")
 BookUI = NodePath("RecipeBook")
 CauldronNode = NodePath("Cauldron")
+
+[node name="SceneTransition" type="Button" parent="." unique_id=1424169258]
+offset_left = -2.0
+offset_top = 147.0
+offset_right = 52.0
+offset_bottom = 237.0
+icon = ExtResource("9_tg7a1")
+flat = true
+autowrap_trim_flags = 0
+expand_icon = true
+script = ExtResource("10_mg78p")
+TargetScenePath = "uid://cq10oa7qe6wxd"
 
 [node name="Cauldron" parent="." unique_id=1589184049 node_paths=PackedStringArray("Inventory") instance=ExtResource("4_68esv")]
 z_index = 1
@@ -83,9 +97,10 @@ z_index = 2
 position = Vector2(148, 267)
 ItemData = ExtResource("8_0ofvn")
 
-[node name="PoitionInventory" parent="." unique_id=1013624139 instance=ExtResource("8_51c52")]
+[node name="PoitionInventory" parent="." unique_id=1013624139 node_paths=PackedStringArray("PotionsHolder") instance=ExtResource("8_51c52")]
 offset_left = -1.0
 offset_right = -1.0
+PotionsHolder = NodePath("../PotionsHolder")
 
 [node name="OpenBookButton" type="Button" parent="." unique_id=255146204]
 offset_left = 578.0
@@ -102,3 +117,5 @@ z_index = 4
 offset_top = -12.0
 offset_right = 21.0
 offset_bottom = -12.0
+
+[node name="PotionsHolder" type="Node2D" parent="." unique_id=1128399609]

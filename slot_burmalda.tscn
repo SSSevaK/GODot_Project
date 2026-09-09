@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://b12rlk7x66ia0"]
+
+[ext_resource type="Script" uid="uid://bgvibpady5vjg" path="res://SlotBurmalda.cs" id="1_3ikrs"]
+[ext_resource type="Texture2D" uid="uid://3gj51y1gsp4" path="res://assets_burmalda/ranka.jpg" id="1_hl068"]
+[ext_resource type="FontFile" uid="uid://cy0ftqm2u5o3b" path="res://assets_burmalda/SmallestPixel7.ttf" id="2_d3c36"]
+
+[node name="Slot_burmalda" type="Control" unique_id=941662973]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3ikrs")
+
+[node name="ramka" type="TextureRect" parent="." unique_id=1162070519]
+layout_mode = 0
+offset_right = 80.0
+offset_bottom = 80.0
+texture = ExtResource("1_hl068")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="ramka" unique_id=450582224]
+layout_mode = 0
+offset_left = 58.0
+offset_top = 62.0
+offset_right = 98.0
+offset_bottom = 85.0
+theme_override_colors/font_color = Color(0.4252845, 0.9999998, 0.2570863, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("2_d3c36")
+text = "99"
+
+[node name="Icon" type="TextureRect" parent="." unique_id=1034458895]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 12.0
+offset_right = 62.0
+offset_bottom = 62.0
+expand_mode = 1
+stretch_mode = 5

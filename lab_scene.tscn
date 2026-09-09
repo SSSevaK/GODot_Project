@@ -128,12 +128,12 @@ offset_bottom = -12.0
 
 [node name="PotionsHolder" type="Node2D" parent="." unique_id=1128399609]
 
+[node name="FireFlower3" parent="." unique_id=390487632 instance=ExtResource("1_fup07")]
+z_index = 2
+position = Vector2(193, 267)
+ItemData = ExtResource("8_0ofvn")
+
 [node name="FireFlower2" parent="." unique_id=721430715 instance=ExtResource("1_fup07")]
 z_index = 2
 position = Vector2(102, 267)
-ItemData = ExtResource("8_0ofvn")
-
-[node name="FireFlower" parent="FireFlower2" unique_id=390487632 instance=ExtResource("1_fup07")]
-z_index = 2
-position = Vector2(91, 0)
 ItemData = ExtResource("8_0ofvn")

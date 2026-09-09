@@ -53,9 +53,6 @@ texture = ExtResource("3_u1aty")
 [node name="Marker2D" type="Marker2D" parent="." unique_id=161837520]
 position = Vector2(396, 209)
 
-[node name="Main" parent="." unique_id=1887326427]
-position = Vector2(310, 176)
-
 [node name="TextEdit" type="TextEdit" parent="." unique_id=595458602]
 offset_left = 16.0
 offset_top = 12.0

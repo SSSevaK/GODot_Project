@@ -20,8 +20,8 @@
 [ext_resource type="Script" uid="uid://wg1sw0y8mvi3" path="res://Gorshok10.cs" id="12_kehfn"]
 [ext_resource type="Script" uid="uid://ql8nr2uw8kq3" path="res://Gorshok11.cs" id="13_7lbuq"]
 [ext_resource type="Script" uid="uid://cjbyogo0delsu" path="res://Gorshok12.cs" id="14_8t0rg"]
-[ext_resource type="PackedScene" uid="uid://c0qg7uwa6pqsr" path="res://arrow.tscn" id="21_8t0rg"]
-[ext_resource type="Script" uid="uid://cawpijhlj5ybj" path="res://Arrow.cs" id="22_qavwy"]
+[ext_resource type="Texture2D" uid="uid://cey1h4wt2c0qw" path="res://assets/textures/arrow.png" id="21_qavwy"]
+[ext_resource type="Script" uid="uid://cf28ryjdnlbpp" path="res://SceneTransition4.cs" id="22_qavwy"]
 
 [node name="Ogorod" type="Node2D" unique_id=333487280]
 
@@ -95,6 +95,14 @@ script = ExtResource("8_v2tha")
 [node name="Marker2D" type="Marker2D" parent="." unique_id=615432067]
 position = Vector2(155, 146)
 
-[node name="Arrow" parent="." unique_id=145565114 instance=ExtResource("21_8t0rg")]
-position = Vector2(54, 281)
+[node name="SceneTransition4" type="Button" parent="." unique_id=1397539579]
+offset_left = 22.0
+offset_top = 237.0
+offset_right = 76.0
+offset_bottom = 327.0
+icon = ExtResource("21_qavwy")
+flat = true
+autowrap_trim_flags = 0
+expand_icon = true
 script = ExtResource("22_qavwy")
+TargetScenePath = "uid://b0gl5ycev2mkq"

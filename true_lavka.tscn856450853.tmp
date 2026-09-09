@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://0wuptic2yp0b" path="res://assets/textures/dialog_box.png" id="9_56b06"]
 [ext_resource type="Texture2D" uid="uid://cey1h4wt2c0qw" path="res://assets/textures/arrow.png" id="10_mjkyq"]
 [ext_resource type="PackedScene" uid="uid://bnokexfbo8fv0" path="res://shop_inventory.tscn" id="11_mjkyq"]
-[ext_resource type="Script" uid="uid://dou26ssnhd1ts" path="res://SceneTransition2.cs" id="11_uok8s"]
+[ext_resource type="Script" uid="uid://c170sekx31cvp" path="res://SceneTransition.cs" id="11_uok8s"]
 [ext_resource type="PackedScene" uid="uid://cene7phwu5he0" path="res://potion.tscn" id="12_uok8s"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jogxj"]
@@ -92,7 +92,7 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_qo0qd")
 theme_override_styles/read_only = SubResource("StyleBoxEmpty_l02uf")
 editable = false
 
-[node name="SceneTransition2" type="Button" parent="." unique_id=424945311]
+[node name="SceneTransition" type="Button" parent="." unique_id=424945311]
 offset_left = 653.0
 offset_top = 173.0
 offset_right = 707.0
@@ -103,4 +103,4 @@ flat = true
 autowrap_trim_flags = 0
 expand_icon = true
 script = ExtResource("11_uok8s")
-TargetScenePath = "uid://b0gl5ycev2mkq"
+TargetScenePath = "uid://cq10oa7qe6wxd"

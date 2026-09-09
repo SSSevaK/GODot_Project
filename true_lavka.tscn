@@ -1,9 +1,7 @@
 [gd_scene format=3 uid="uid://cq10oa7qe6wxd"]
 
-[ext_resource type="PackedScene" uid="uid://dbd0p5kyw0724" path="res://white.tscn" id="1_1bede"]
 [ext_resource type="Texture2D" uid="uid://bv7hl5beq282y" path="res://assets/textures/bad_background.png" id="1_i8e77"]
 [ext_resource type="Texture2D" uid="uid://b7xrf5fbeqjbk" path="res://assets/textures/trading_booth.png" id="1_rkshm"]
-[ext_resource type="Script" uid="uid://cikuym6moyj4n" path="res://White.cs" id="2_56b06"]
 [ext_resource type="Texture2D" uid="uid://b7c5fsae77lw2" path="res://assets/textures/alchemy_lamp.png" id="3_u1aty"]
 [ext_resource type="PackedScene" uid="uid://7u7c87gxq1lw" path="res://main_hero.tscn" id="7_wk4d5"]
 [ext_resource type="Script" uid="uid://dffir3mmhj1j7" path="res://GoldCounter.cs" id="8_1bede"]
@@ -28,9 +26,8 @@
 
 [node name="True_lavka" type="Node2D" unique_id=1057666998]
 
-[node name="White" parent="." unique_id=1998657987 instance=ExtResource("1_1bede")]
+[node name="White" parent="." unique_id=1998657987]
 position = Vector2(113, 159)
-script = ExtResource("2_56b06")
 
 [node name="BadBackground" type="Sprite2D" parent="." unique_id=521684963]
 position = Vector2(323, 180)

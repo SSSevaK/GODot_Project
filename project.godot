@@ -11,10 +11,11 @@ config_version=5
 [application]
 
 config/name="ZELEVAR"
-run/main_scene="uid://b0gl5ycev2mkq"
+
+run/main_scene="uid://cq10oa7qe6wxd"
+
 config/features=PackedStringArray("4.7", "C#", "Forward Plus")
 config/icon="res://icon.svg"
-<<<<<<<HEADrun/main_scene="uid://b0gl5ycev2mkq"
 
 [autoload]
 

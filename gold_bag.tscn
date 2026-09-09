@@ -5,7 +5,7 @@
 
 [node name="gold_bag" type="StaticBody2D" unique_id=937258237]
 
-[node name="GoldBag" type="Sprite2D" parent="." unique_id=1790424269]
+[node name="Abdd1De37Ade4Fe19801c7108Fe7677a" type="Sprite2D" parent="." unique_id=1790424269]
 position = Vector2(0, -2.0000002)
 scale = Vector2(0.03907496, 0.03907496)
 texture = ExtResource("1_k1yc0")

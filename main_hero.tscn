@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://7u7c87gxq1lw"]
+
+[ext_resource type="Texture2D" uid="uid://da37iq1bfkia2" path="res://assets/textures/ultramarine.png" id="1_n6eia"]
+
+[node name="MainHero" type="StaticBody2D" unique_id=611715431]
+
+[node name="Ultramarine" type="Sprite2D" parent="." unique_id=1404910513]
+position = Vector2(0, 1)
+texture = ExtResource("1_n6eia")

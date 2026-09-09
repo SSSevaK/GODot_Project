@@ -2,9 +2,9 @@
 
 [ext_resource type="PackedScene" uid="uid://c5x4v6478jll2" path="res://flask.tscn" id="1_kqvm2"]
 [ext_resource type="PackedScene" uid="uid://dhqx14hsb3g5l" path="res://skales.tscn" id="2_67153"]
-[ext_resource type="PackedScene" uid="uid://c7giupltwvgrb" path="res://table.tscn" id="3_d0li4"]
+[ext_resource type="PackedScene" uid="uid://c7giupltwvgrb" path="res://table_lab.tscn" id="3_d0li4"]
 [ext_resource type="PackedScene" uid="uid://dbd0p5kyw0724" path="res://white.tscn" id="4_xldjh"]
-[ext_resource type="Script" uid="uid://dffir3mmhj1j7" path="res://TextEdit.cs" id="5_67153"]
+[ext_resource type="Script" uid="uid://dffir3mmhj1j7" path="res://GoldCounter.cs" id="5_67153"]
 
 [node name="Node2D" type="Node2D" unique_id=133561643]
 

@@ -15,7 +15,7 @@ public partial class SceneTransition : Button
 	{
 		if (!string.IsNullOrEmpty(TargetScenePath))
 		{
-			GetTree().ChangeSceneToFile(TargetScenePath);
+			SceneManager.Instance.SwitchScene(TargetScenePath);
 		}
 		else
 		{

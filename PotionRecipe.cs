@@ -5,8 +5,10 @@ public partial class PotionRecipe : Resource
 {
 	[Export] 
 	public string PotionName { get; set; } = "Зелье";
-	[Export] 
-	public Texture2D Icon { get; set; }
+	
+	[Export] public int ID { get; set; }       // 1 — Хил, 2 — Мана и т.д.
+	[Export] public int Price { get; set; } = 100; // Цена зелья
+	[Export] public Texture2D Icon { get; set; }
 
 	// Требуемое значение Лёд-Огонь (-0.8 для Зелья Исцеления)
 	[Export(PropertyHint.Range, "-5.0, 5.0, 0.1")] 

@@ -1,33 +1,19 @@
 [gd_scene format=3 uid="uid://cq10oa7qe6wxd"]
 
-<<<<<<< HEAD
 [ext_resource type="PackedScene" uid="uid://dbd0p5kyw0724" path="res://white.tscn" id="1_1bede"]
-[ext_resource type="Texture2D" uid="uid://b7xrf5fbeqjbk" path="res://assets/textures/trading_booth.png" id="1_rkshm"]
-[ext_resource type="Script" uid="uid://cikuym6moyj4n" path="res://White.cs" id="2_56b06"]
-=======
 [ext_resource type="Texture2D" uid="uid://bv7hl5beq282y" path="res://assets/textures/bad_background.png" id="1_i8e77"]
 [ext_resource type="Texture2D" uid="uid://b7xrf5fbeqjbk" path="res://assets/textures/trading_booth.png" id="1_rkshm"]
->>>>>>> b73095f649e597abd992b21967e7ce336c1ff079
-[ext_resource type="PackedScene" uid="uid://cjpevf7xeunnl" path="res://healing_poizon.tscn" id="3_th6vq"]
+[ext_resource type="Script" uid="uid://cikuym6moyj4n" path="res://White.cs" id="2_56b06"]
 [ext_resource type="Texture2D" uid="uid://b7c5fsae77lw2" path="res://assets/textures/alchemy_lamp.png" id="3_u1aty"]
 [ext_resource type="PackedScene" uid="uid://2vt6vdr04fmi" path="res://main.tscn" id="4_u1aty"]
-[ext_resource type="PackedScene" uid="uid://1o3sjhyfucbd" path="res://mana_poizon.tscn" id="5_cux8q"]
 [ext_resource type="PackedScene" uid="uid://7u7c87gxq1lw" path="res://main_hero.tscn" id="7_wk4d5"]
-[ext_resource type="Script" uid="uid://dffir3mmhj1j7" path="res://TextEdit.cs" id="8_1bede"]
-<<<<<<< HEAD
+[ext_resource type="Script" uid="uid://dffir3mmhj1j7" path="res://GoldCounter.cs" id="8_1bede"]
+[ext_resource type="Script" uid="uid://2qvlsrlsgku1" path="res://MainHero.cs" id="8_56b06"]
+[ext_resource type="Texture2D" uid="uid://0wuptic2yp0b" path="res://assets/textures/dialog_box.png" id="9_56b06"]
 [ext_resource type="Texture2D" uid="uid://da37iq1bfkia2" path="res://assets/textures/ultramarine.png" id="9_i8e77"]
 [ext_resource type="Script" uid="uid://c170sekx31cvp" path="res://SceneTransition.cs" id="10_mjkyq"]
 [ext_resource type="PackedScene" uid="uid://bnokexfbo8fv0" path="res://shop_inventory.tscn" id="11_mjkyq"]
 [ext_resource type="PackedScene" uid="uid://cene7phwu5he0" path="res://potion.tscn" id="12_uok8s"]
-
-[node name="True_lavka" type="Node2D" unique_id=1057666998]
-
-[node name="White" parent="." unique_id=1998657987 instance=ExtResource("1_1bede")]
-position = Vector2(113, 159)
-script = ExtResource("2_56b06")
-=======
-[ext_resource type="Script" uid="uid://2qvlsrlsgku1" path="res://MainHero.cs" id="8_56b06"]
-[ext_resource type="Texture2D" uid="uid://0wuptic2yp0b" path="res://assets/textures/dialog_box.png" id="9_56b06"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jogxj"]
 
@@ -43,14 +29,17 @@ script = ExtResource("2_56b06")
 
 [node name="True_lavka" type="Node2D" unique_id=1057666998]
 
+[node name="White" parent="." unique_id=1998657987 instance=ExtResource("1_1bede")]
+position = Vector2(113, 159)
+script = ExtResource("2_56b06")
+
 [node name="BadBackground" type="Sprite2D" parent="." unique_id=521684963]
-position = Vector2(514, 466)
+position = Vector2(323, 180)
 texture = ExtResource("1_i8e77")
 
 [node name="MainHero" parent="." unique_id=611715431 instance=ExtResource("7_wk4d5")]
-position = Vector2(100, 441)
+position = Vector2(172, 152)
 script = ExtResource("8_56b06")
->>>>>>> b73095f649e597abd992b21967e7ce336c1ff079
 
 [node name="TradingBooth" type="Sprite2D" parent="." unique_id=699631082]
 position = Vector2(320, 179)
@@ -61,32 +50,16 @@ position = Vector2(124, 227)
 texture = ExtResource("3_u1aty")
 
 [node name="Marker2D" type="Marker2D" parent="." unique_id=161837520]
-<<<<<<< HEAD
-position = Vector2(343, 300)
-
-[node name="healing_poizon" parent="." unique_id=2048465825 instance=ExtResource("3_th6vq")]
-z_index = 2
-position = Vector2(342, 167)
-=======
-position = Vector2(444, 588)
-
-[node name="healing_poizon" parent="." unique_id=2048465825 instance=ExtResource("3_th6vq")]
-position = Vector2(393, 585)
->>>>>>> b73095f649e597abd992b21967e7ce336c1ff079
+position = Vector2(396, 209)
 
 [node name="Main" parent="." unique_id=1887326427 instance=ExtResource("4_u1aty")]
 position = Vector2(310, 176)
 
-[node name="mana_poizon" parent="." unique_id=1510911487 instance=ExtResource("5_cux8q")]
-<<<<<<< HEAD
-z_index = 2
-position = Vector2(382, 284)
-
 [node name="TextEdit" type="TextEdit" parent="." unique_id=595458602]
-offset_left = 452.0
-offset_top = 8.0
-offset_right = 635.0
-offset_bottom = 55.0
+offset_left = 16.0
+offset_top = 12.0
+offset_right = 199.0
+offset_bottom = 59.0
 script = ExtResource("8_1bede")
 
 [node name="SceneTransition-shop" type="Button" parent="." unique_id=1219284627]
@@ -102,22 +75,16 @@ script = ExtResource("10_mjkyq")
 TargetScenePath = "uid://b0gl5ycev2mkq"
 
 [node name="ShopInventory" parent="." unique_id=1056859167 node_paths=PackedStringArray("ShopSlotsParent") instance=ExtResource("11_mjkyq")]
-position = Vector2(134, 276)
+position = Vector2(133, 275)
 PotionScene = ExtResource("12_uok8s")
 ShopSlotsParent = NodePath(".")
-=======
-position = Vector2(444, 588)
 
-[node name="DialogBox" type="Sprite2D" parent="." unique_id=1833932678]
-position = Vector2(99.00001, 37)
-scale = Vector2(0.5148148, 0.6375)
-texture = ExtResource("9_56b06")
-
-[node name="TextEdit" type="TextEdit" parent="." unique_id=595458602]
-offset_left = 575.0
-offset_top = 287.0
-offset_right = 719.0
-offset_bottom = 344.0
+[node name="TextEdit_Styled" type="TextEdit" parent="." unique_id=595458603]
+z_index = 4
+offset_left = 702.0
+offset_top = 103.0
+offset_right = 885.0
+offset_bottom = 148.0
 theme_override_colors/font_color = Color(0.019165233, 0.009193299, 0.0025355213, 1)
 theme_override_font_sizes/font_size = 10
 theme_override_styles/normal = SubResource("StyleBoxEmpty_jogxj")
@@ -126,11 +93,16 @@ theme_override_styles/read_only = SubResource("StyleBoxEmpty_knmi7")
 editable = false
 script = ExtResource("8_1bede")
 
+[node name="DialogBox" type="Sprite2D" parent="." unique_id=1833932678]
+position = Vector2(574, 17.000002)
+scale = Vector2(0.5148148, 0.6375)
+texture = ExtResource("9_56b06")
+
 [node name="TextEdit2" type="TextEdit" parent="." unique_id=293309927]
-offset_left = 458.0
-offset_top = 379.0
-offset_right = 599.0
-offset_bottom = 433.0
+offset_left = 477.0
+offset_top = 7.0
+offset_right = 618.0
+offset_bottom = 62.0
 theme_override_colors/caret_color = Color(0, 0, 0, 1)
 theme_override_colors/selection_color = Color(0.013289164, 0.003507211, 0.00029661215, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -139,4 +111,3 @@ theme_override_styles/normal = SubResource("StyleBoxEmpty_uok8s")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_qo0qd")
 theme_override_styles/read_only = SubResource("StyleBoxEmpty_l02uf")
 editable = false
->>>>>>> b73095f649e597abd992b21967e7ce336c1ff079

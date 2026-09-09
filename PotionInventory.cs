@@ -7,7 +7,7 @@ public partial class PotionInventory : Control
 	[Export] public GridContainer SlotsGrid { get; set; }
 	[Export] public Node2D PotionsHolder { get; set; }
 	[Export] public PackedScene PotionScene { get; set; }
-	[Export] public PackedScene SlotScene { get; set; } // Ссылка на PotionSlot.tscn
+	[Export] public PackedScene SlotScene { get; set; }
 	[Export] public int TotalSlots { get; set; } = 9;
 
 	public override void _Ready()
@@ -19,16 +19,28 @@ public partial class PotionInventory : Control
 			OpenButton.Pressed += () => SetInventoryVisible(!InventoryPanel.Visible);
 		}
 
-		// Сначала инициализируем слоты, затем восстанавливаем зелья
 		InitSlots();
+
+		if (SceneManager.Instance != null)
+		{
+			SceneManager.Instance.SceneActivated += OnSceneActivated;
+		}
+
 		Callable.From(RestorePotionsFromGameManager).CallDeferred();
+	}
+
+	private void OnSceneActivated(string scenePath)
+	{
+		if (!string.IsNullOrEmpty(scenePath) && scenePath.ToLower().Contains("lab"))
+		{
+			Callable.From(RestorePotionsFromGameManager).CallDeferred();
+		}
 	}
 
 	private void InitSlots()
 	{
 		if (SlotsGrid == null) return;
 
-		// Если слотов еще нет в сетке — спавним их
 		if (SlotsGrid.GetChildCount() == 0 && SlotScene != null)
 		{
 			for (int i = 0; i < TotalSlots; i++)
@@ -43,16 +55,15 @@ public partial class PotionInventory : Control
 	{
 		if (GameManager.Instance == null || PotionScene == null || SlotsGrid == null) return;
 
-		// 1. Очищаем старые 2D-узлы зелий на сцене
 		if (PotionsHolder != null)
 		{
 			foreach (Node child in PotionsHolder.GetChildren())
 			{
+				PotionsHolder.RemoveChild(child);
 				child.QueueFree();
 			}
 		}
 
-		// 2. Сбрасываем ссылки у всех слотов
 		foreach (Node child in SlotsGrid.GetChildren())
 		{
 			if (child is PotionSlot slot)
@@ -61,7 +72,6 @@ public partial class PotionInventory : Control
 			}
 		}
 
-		// 3. Раскладываем ТЕКУЩИЕ зелья из GameManager
 		var savedRecipes = GameManager.Instance.PotionsInInventory;
 
 		for (int i = 0; i < savedRecipes.Count; i++)
@@ -85,7 +95,6 @@ public partial class PotionInventory : Control
 		}
 	}
 
-	// Вызывается при варке нового зелья котлом
 	public bool AddPotionNode(Potion potionNode)
 	{
 		return PutPotionIntoFreeSlot(potionNode);
@@ -131,4 +140,4 @@ public partial class PotionInventory : Control
 			}
 		}
 	}
-}
+}	

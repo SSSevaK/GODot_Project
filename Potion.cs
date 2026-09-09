@@ -20,13 +20,25 @@ public partial class Potion : Area2D
 		InitSprite();
 	}
 
+	public void SetSlot(ShopSlot slot)
+	{
+		_currentSlot = slot;
+	}
+
 	private void InitSprite()
 	{
 		if (_sprite == null) _sprite = GetNodeOrNull<Sprite2D>("Sprite2D");
 
-		if (_sprite != null && RecipeData != null && RecipeData.Icon != null)
+		if (_sprite != null && RecipeData != null)
 		{
-			_sprite.Texture = RecipeData.Icon;
+			if (RecipeData.Icon != null)
+			{
+				_sprite.Texture = RecipeData.Icon;
+			}
+			else
+			{
+				GD.PrintErr($"[Potion] У ресурса '{RecipeData.PotionName}' не назначена Иконка (Icon) в Инспекторе!");
+			}
 		}
 	}
 
@@ -88,18 +100,29 @@ public partial class Potion : Area2D
 
 	private void CheckDropZone()
 	{
-		var overlappingAreas = GetOverlappingAreas();
+		var overlappingBodies = GetOverlappingBodies();
+		foreach (var body in overlappingBodies)
+		{
+			if (body is MainHero hero)
+			{
+				if (hero.TrySellPotion(this))
+				{
+					return;
+				}
+			}
+		}
 
+		var overlappingAreas = GetOverlappingAreas();
 		foreach (var area in overlappingAreas)
 		{
 			if (area is ShopSlot slot && slot.IsFree())
 			{
 				slot.PlaceItem(this);
-				_currentSlot = slot;
 				return;
 			}
 		}
 
+		// Возвращаем в прежний слот, если отпустили мимо
 		if (_currentSlot != null)
 		{
 			_currentSlot.PlaceItem(this);

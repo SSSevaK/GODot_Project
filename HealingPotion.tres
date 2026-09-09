@@ -6,6 +6,7 @@
 [resource]
 script = ExtResource("1_j06co")
 PotionName = "Зелье Лечения"
+ID = 1
 Icon = ExtResource("1_hxo6c")
-TargetFireIceValue = -0.019999999999999574
+TargetFireIceValue = -0.01999999999999957
 Tolerance = 0.02

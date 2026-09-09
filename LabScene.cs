@@ -45,7 +45,7 @@ public partial class LabScene : Node2D
 		// Отписываемся при уничтожении сцены для предотвращения утечек памяти
 		if (BookUI != null)
 		{
-			BookUI.RecipeSelected -= OnRecipeSelectedFromBook;
+			
 		}
 	}
 }

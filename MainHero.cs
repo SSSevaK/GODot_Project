@@ -6,76 +6,70 @@ public partial class MainHero : StaticBody2D
 	[Export] public Godot.TextEdit Text { get; set; }
 	[Export] public GoldCounter GoldCounter { get; set; }
 
-	
+	[ExportGroup("Позиции движения")]
+	[Export] public Vector2 StartPosition { get; set; } = new Vector2(-150, 160);
+	[Export] public Vector2 ShopPosition { get; set; } = new Vector2(440, 160);
+	[Export] public Vector2 ExitPosition { get; set; } = new Vector2(-150, 160);
+
+	[ExportGroup("Скорость движения")]
+	[Export] public float WalkToShopDuration { get; set; } = 3.0f;
+	[Export] public float ExitDuration { get; set; } = 1.5f;
+
+	// СТАТИЧЕСКИЕ ПЕРЕМЕННЫЕ: не сбрасываются при смене сцен!
+	private static bool _hasActiveOffer = false;
+	private static int _savedNeedID = 1;
 
 	public int NeedID = 1;
 	private bool check = false;
 	private Tween _activeTween;
 
-	private Vector2 StartPosition = new Vector2(172, 152);
-	private Vector2 ShopPosition = new Vector2(440, 160);
-	private Vector2 ExitPosition = new Vector2(1015, 442);
-
 	public override void _Ready()
 	{
-	// 1. Безопасно ищем узлы через родителя или CurrentScene (если они не назначены в Инспекторе)
-	var parent = GetParent();
-	var currentScene = GetTree()?.CurrentScene;
+		InitNodes();
 
-	if (Box == null)
-	{
-		Box = parent?.GetNodeOrNull<Sprite2D>("DialogBox") 
-			  ?? currentScene?.GetNodeOrNull<Sprite2D>("DialogBox");
-	}
-
-	if (Text == null)
-	{
-		Text = parent?.GetNodeOrNull<Godot.TextEdit>("TextEdit2") 
-			   ?? currentScene?.GetNodeOrNull<Godot.TextEdit>("TextEdit2");
-	}
-
-	if (GoldCounter == null)
-	{
-		GoldCounter = parent?.GetNodeOrNull<GoldCounter>("TextEdit") 
-					  ?? currentScene?.GetNodeOrNull<GoldCounter>("TextEdit");
-	}
-
-	// 2. Настраиваем текст диалога
-	if (Text != null)
-	{
-		Text.AddThemeColorOverride("font_color", Colors.Black);
-		Text.AddThemeColorOverride("font_readonly_color", Colors.Black);
-		Text.Text = "";
-	}
-
-	// 3. Подписываемся на SceneManager
-	if (SceneManager.Instance != null)
-	{
-		SceneManager.Instance.SceneActivated += OnSceneActivated;
-	}
-
-	GlobalPosition = StartPosition;
-	NewOffer();
-	}
-
-	// Вызывается автоматически через SceneManager при каждом возврате в сцену
-	private void OnSceneActivated(string scenePath)
-	{
-	if (string.IsNullOrEmpty(scenePath)) return;
-
-	if (scenePath.ToLower().Contains("true_lavka"))
-	{
-		// Если покупатель уже стоит у стойки и ждёт зелье — не отправляем его на старт
-		if (check)
+		if (SceneManager.Instance != null)
 		{
-			// Восстанавливаем позицию диалогового окна на всякий случай
-			ShowOffer();
-			return;
+			SceneManager.Instance.SceneActivated += OnSceneActivated;
 		}
 
-		// Если его еще нет у стойки — запускаем движение
-		NewOffer();
+		// Если заказ УЖЕ был создан ранее — сразу восстанавливаем покупателя у стойки
+		if (_hasActiveOffer)
+		{
+			RestoreExistingOffer();
+		}
+		else
+		{
+			NewOffer();
+		}
 	}
+
+	private void OnSceneActivated(string scenePath)
+	{
+		if (string.IsNullOrEmpty(scenePath)) return;
+
+		if (scenePath.ToLower().Contains("true_lavka"))
+		{
+			// При возврате в лавку проверяем: есть ли уже активный заказ
+			if (_hasActiveOffer)
+			{
+				RestoreExistingOffer();
+			}
+			else
+			{
+				NewOffer();
+			}
+		}
+	}
+
+	/// <summary>
+	/// Мгновенно восстанавливает покупателя у стойки без повторного движения
+	/// </summary>
+	private void RestoreExistingOffer()
+	{
+		_activeTween?.Kill();
+		NeedID = _savedNeedID;
+		GlobalPosition = ShopPosition; // Сразу ставим к прилавку
+		ShowOffer();
 	}
 
 	private void NewOffer()
@@ -83,11 +77,15 @@ public partial class MainHero : StaticBody2D
 		check = false;
 		Generate();
 
-		
+		// Запоминаем текущий заказ в статические переменные
+		_savedNeedID = NeedID;
+		_hasActiveOffer = true;
+
+		GlobalPosition = StartPosition;
 
 		_activeTween?.Kill();
 		_activeTween = CreateTween();
-		_activeTween.TweenProperty(this, "global_position", ShopPosition, 3f);
+		_activeTween.TweenProperty(this, "global_position", ShopPosition, WalkToShopDuration);
 		_activeTween.Finished += ShowOffer;
 	}
 
@@ -167,7 +165,44 @@ public partial class MainHero : StaticBody2D
 
 		_activeTween?.Kill();
 		_activeTween = CreateTween();
-		_activeTween.TweenProperty(this, "global_position", ExitPosition, 1f);
-		_activeTween.Finished += NewOffer;
+		_activeTween.TweenProperty(this, "global_position", ExitPosition, ExitDuration);
+		
+		// Покупатель ушел за экран — сбрасываем активный заказ и зовем следующего
+		_activeTween.Finished += () =>
+		{
+			_hasActiveOffer = false;
+			NewOffer();
+		};
+	}
+
+	private void InitNodes()
+	{
+		var parent = GetParent();
+		var currentScene = GetTree()?.CurrentScene;
+
+		if (Box == null)
+		{
+			Box = parent?.GetNodeOrNull<Sprite2D>("DialogBox") 
+				  ?? currentScene?.GetNodeOrNull<Sprite2D>("DialogBox");
+		}
+
+		if (Text == null)
+		{
+			Text = parent?.GetNodeOrNull<Godot.TextEdit>("TextEdit2") 
+				   ?? currentScene?.GetNodeOrNull<Godot.TextEdit>("TextEdit2");
+		}
+
+		if (GoldCounter == null)
+		{
+			GoldCounter = parent?.GetNodeOrNull<GoldCounter>("TextEdit") 
+						  ?? currentScene?.GetNodeOrNull<GoldCounter>("TextEdit");
+		}
+
+		if (Text != null)
+		{
+			Text.AddThemeColorOverride("font_color", Colors.Black);
+			Text.AddThemeColorOverride("font_readonly_color", Colors.Black);
+			Text.Text = "";
+		}
 	}
 }

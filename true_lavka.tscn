@@ -37,9 +37,11 @@ script = ExtResource("2_56b06")
 position = Vector2(323, 180)
 texture = ExtResource("1_i8e77")
 
-[node name="MainHero" parent="." unique_id=611715431 instance=ExtResource("7_wk4d5")]
-position = Vector2(172, 152)
+[node name="MainHero" parent="." unique_id=611715431 node_paths=PackedStringArray("Text", "GoldCounter") instance=ExtResource("7_wk4d5")]
+position = Vector2(-71, 162)
 script = ExtResource("8_56b06")
+Text = NodePath("../TextEdit2")
+GoldCounter = NodePath("../TextEdit")
 
 [node name="TradingBooth" type="Sprite2D" parent="." unique_id=699631082]
 position = Vector2(320, 179)
@@ -94,14 +96,14 @@ editable = false
 script = ExtResource("8_1bede")
 
 [node name="DialogBox" type="Sprite2D" parent="." unique_id=1833932678]
-position = Vector2(574, 17.000002)
+position = Vector2(552, 34)
 scale = Vector2(0.5148148, 0.6375)
 texture = ExtResource("9_56b06")
 
 [node name="TextEdit2" type="TextEdit" parent="." unique_id=293309927]
-offset_left = 477.0
+offset_left = 488.0
 offset_top = 7.0
-offset_right = 618.0
+offset_right = 629.0
 offset_bottom = 62.0
 theme_override_colors/caret_color = Color(0, 0, 0, 1)
 theme_override_colors/selection_color = Color(0.013289164, 0.003507211, 0.00029661215, 1)

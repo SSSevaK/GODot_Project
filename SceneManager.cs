@@ -85,68 +85,147 @@ public partial class SceneManager : Node
 
         if (GetTree().CurrentScene.SceneFilePath == "res://lab_scene.tscn")
         {
-            Gorshok gorshok = FindGorshok();
-
-            if (gorshok != null)
-            {
-                if (gorshok.grewWheat)
-                {
-                    Ingredient ingredient = ingredientScene.Instantiate<Ingredient>();
-
-                    ingredient.ItemData = wheatData;
-
-                    targetScene.AddChild(ingredient);
-                    ingredient.GlobalPosition = new Vector2(101, 268);
-
-                    gorshok.grewWheat = false;
-                }
-
-                if (gorshok.grewSeed)
-                {
-                    Ingredient ingredient = ingredientScene.Instantiate<Ingredient>();
-
-                    ingredient.ItemData = seedData;
-
-                    targetScene.AddChild(ingredient);
-                    ingredient.GlobalPosition = new Vector2(101, 268);
-
-                    gorshok.grewSeed = false;
-                }
-            }
+            FindAllGorshoks();
         }
 
         EmitSignal(SignalName.SceneActivated, scenePath);
     }
 
-    private Gorshok FindGorshok()
+    private void FindAllGorshoks()
     {
         foreach (Node scene in _cachedScenes.Values)
         {
             if (scene == null || !GodotObject.IsInstanceValid(scene))
                 continue;
 
-            Gorshok gorshok = FindGorshokInNode(scene);
-
-            if (gorshok != null)
-                return gorshok;
+            FindAllGorshoksInNode(scene);
         }
-
-        return null;
     }
 
-    private Gorshok FindGorshokInNode(Node node)
+    private void FindAllGorshoksInNode(Node node)
     {
         if (node is Gorshok gorshok)
-            return gorshok;
+        {
+            CreateIngredients(gorshok.grewWheat, gorshok.grewSeed);
+
+            gorshok.grewWheat = false;
+            gorshok.grewSeed = false;
+        }
+
+        if (node is Gorshok2 gorshok2)
+        {
+            CreateIngredients(gorshok2.grewWheat, gorshok2.grewSeed);
+
+            gorshok2.grewWheat = false;
+            gorshok2.grewSeed = false;
+        }
+
+        if (node is Gorshok3 gorshok3)
+        {
+            CreateIngredients(gorshok3.grewWheat, gorshok3.grewSeed);
+
+            gorshok3.grewWheat = false;
+            gorshok3.grewSeed = false;
+        }
+
+        if (node is Gorshok4 gorshok4)
+        {
+            CreateIngredients(gorshok4.grewWheat, gorshok4.grewSeed);
+
+            gorshok4.grewWheat = false;
+            gorshok4.grewSeed = false;
+        }
+
+        if (node is Gorshok5 gorshok5)
+        {
+            CreateIngredients(gorshok5.grewWheat, gorshok5.grewSeed);
+
+            gorshok5.grewWheat = false;
+            gorshok5.grewSeed = false;
+        }
+
+        if (node is Gorshok6 gorshok6)
+        {
+            CreateIngredients(gorshok6.grewWheat, gorshok6.grewSeed);
+
+            gorshok6.grewWheat = false;
+            gorshok6.grewSeed = false;
+        }
+
+        if (node is Gorshok7 gorshok7)
+        {
+            CreateIngredients(gorshok7.grewWheat, gorshok7.grewSeed);
+
+            gorshok7.grewWheat = false;
+            gorshok7.grewSeed = false;
+        }
+
+        if (node is Gorshok8 gorshok8)
+        {
+            CreateIngredients(gorshok8.grewWheat, gorshok8.grewSeed);
+
+            gorshok8.grewWheat = false;
+            gorshok8.grewSeed = false;
+        }
+
+        if (node is Gorshok9 gorshok9)
+        {
+            CreateIngredients(gorshok9.grewWheat, gorshok9.grewSeed);
+
+            gorshok9.grewWheat = false;
+            gorshok9.grewSeed = false;
+        }
+
+        if (node is Gorshok10 gorshok10)
+        {
+            CreateIngredients(gorshok10.grewWheat, gorshok10.grewSeed);
+
+            gorshok10.grewWheat = false;
+            gorshok10.grewSeed = false;
+        }
+
+        if (node is Gorshok11 gorshok11)
+        {
+            CreateIngredients(gorshok11.grewWheat, gorshok11.grewSeed);
+
+            gorshok11.grewWheat = false;
+            gorshok11.grewSeed = false;
+        }
+
+        if (node is Gorshok12 gorshok12)
+        {
+            CreateIngredients(gorshok12.grewWheat, gorshok12.grewSeed);
+
+            gorshok12.grewWheat = false;
+            gorshok12.grewSeed = false;
+        }
 
         foreach (Node child in node.GetChildren())
         {
-            Gorshok result = FindGorshokInNode(child);
+            FindAllGorshoksInNode(child);
+        }
+    }
 
-            if (result != null)
-                return result;
+    private void CreateIngredients(bool grewWheat, bool grewSeed)
+    {
+        if (grewWheat)
+        {
+            Ingredient ingredient = ingredientScene.Instantiate<Ingredient>();
+
+            ingredient.ItemData = wheatData;
+
+            GetTree().CurrentScene.AddChild(ingredient);
+            ingredient.GlobalPosition = new Vector2(101, 268);
         }
 
-        return null;
+        if (grewSeed)
+        {
+            Ingredient ingredient = ingredientScene.Instantiate<Ingredient>();
+
+            ingredient.ItemData = seedData;
+
+            GetTree().CurrentScene.AddChild(ingredient);
+            ingredient.GlobalPosition = new Vector2(101, 268);
+        }
     }
 }

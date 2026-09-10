@@ -70,11 +70,7 @@ public partial class Cauldron : Area2D
 		if (difference <= TargetRecipe.Tolerance)
 		{
 			ShowWarning($"Сварено: {TargetRecipe.PotionName}!");
-
-			// 1. Сохраняем рецепт в глобальный менеджер
 			GameManager.Instance.AddPotion(TargetRecipe);
-
-			// 2. Добавляем визуальный узел в панель инвентаря лаборатории
 			if (PotionScene != null)
 			{
 				Potion newPotion = PotionScene.Instantiate<Potion>();

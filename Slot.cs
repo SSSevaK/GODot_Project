@@ -2,25 +2,28 @@ using Godot;
 
 public partial class Slot : Area2D
 {
-	// Хранит ссылку на ингредиент, если слот занят
-	public Node2D CurrentIngredient { get; private set; } = null;
+    public Node2D CurrentIngredient { get; private set; } = null;
 
-	// Проверка: свободна ли ячейка
-	public bool IsFree()
-	{
-		return CurrentIngredient == null;
-	}
+    public bool IsFree()
+    {
+        return CurrentIngredient == null;
+    }
 
-	// Помещаем ингредиент в центр ячейки
-	public void PlaceIngredient(Node2D ingredient)
-	{
-		CurrentIngredient = ingredient;
-		ingredient.GlobalPosition = GlobalPosition;
-	}
+    public void PlaceIngredient(Node2D ingredient)
+    {
+        if (IsFree())
+        {
+            CurrentIngredient = ingredient;
+            ingredient.GlobalPosition = GlobalPosition;
+        }
+        else
+        {
+            ingredient.GlobalPosition = GlobalPosition + new Vector2(0, 33);
+        }
+    }
 
-	// Метод для освобождения ячейки (когда игрок забирает предмет)
-	public void ClearSlot()
-	{
-		CurrentIngredient = null;
-	}
+    public void ClearSlot()
+    {
+        CurrentIngredient = null;
+    }
 }
